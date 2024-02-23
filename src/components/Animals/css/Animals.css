@@ -1,0 +1,36 @@
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  margin: 0 -5px;
+}
+
+.smallcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+img {
+  width: 100%;
+}
+
+.title {
+  color: rgb(187, 245, 160);
+  font-size: 18px;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+
