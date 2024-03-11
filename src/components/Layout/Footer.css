@@ -1,0 +1,25 @@
+/* Footer.css */
+
+.footer {
+  background-color: #121a1c;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer h6 {
+  color: #64f357;
+  /* text-align: center; */
+}
+
+.footer a {
+  color: #fff;
+  text-align: center;
+}
+
+.background {
+  /* Add styles for the background or SVG wave */
+}
+
+@media (max-width: 768px) {
+  /* Add additional styling for smaller screens if needed */
+}
