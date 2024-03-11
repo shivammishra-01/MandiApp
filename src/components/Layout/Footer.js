@@ -1,51 +1,101 @@
-import React from 'react'
+import React from "react";
+import "./Footer.css"; // Import your CSS file for styling
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div>
-      <>
-      
-  
-      <div className="footer-container">
-        <div className="footer-section">
-          <h3>Categories</h3>
-          <ul>
-            <li><a href="/">Electronics</a></li>
-            <li><a href="/">Clothing</a></li>
-            <li><a href="/">Home &amp; Kitchen</a></li>
-            {/* Add more categories as needed */}
-          </ul>
-        </div>
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-3 col-lg-4 col-xl-3">
+            <h6 className="text-uppercase fw-bold">Mandi.com</h6>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
 
-        <div className="footer-section">
-          <h3>Customer Service</h3>
-          <ul>
-            <li><a href="/">Contact Us</a></li>
-            <li><a href="/">Shipping Information</a></li>
-            <li><a href="/">Returns &amp; Exchanges</a></li>
-            {/* Add more customer service links as needed */}
-          </ul>
-        </div>
+          <div className="col-md-2 col-lg-2 col-xl-2">
+            <h6 className="text-uppercase fw-bold">Products</h6>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#!" className="text-white">
+                  Crops mandi
+                </a>
+              </li>
+              <li>
+                <a href="#!" className="text-white">
+                  Animals mandi
+                </a>
+              </li>
+              <li>
+                <a href="#!" className="text-white">
+                  Fertilizers mandi
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <div className="footer-section">
-          <h3>Connect With Us</h3>
-          <ul>
-            <li><a href="/">Facebook</a></li>
-            <li><a href="/">Twitter</a></li>
-            <li><a href="/">Instagram</a></li>
-            {/* Add more social media links as needed */}
-          </ul>
+          <div className="col-md-3 col-lg-2 col-xl-2">
+            <h6 className="text-uppercase fw-bold">Useful links</h6>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#!" className="text-white">
+                  Your Account
+                </a>
+              </li>
+              <li>
+                <a href="#!" className="text-white">
+                  Become an Affiliate
+                </a>
+              </li>
+              <li>
+                <a href="#!" className="text-white">
+                  Shipping Rates
+                </a>
+              </li>
+              <li>
+                <a href="#!" className="text-white">
+                  Help
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-md-4 col-lg-3 col-xl-3">
+            <h6 className="text-uppercase fw-bold">Contact</h6>
+            <ul className="list-unstyled">
+              <li>
+                <i className="fas fa-home mr-3"></i> Darbhanga, Bihar, Bharat
+              </li>
+              <li>
+                <i className="fas fa-envelope mr-3"></i> Farmer@mandi.com
+              </li>
+              <li>
+                <i className="fas fa-phone mr-3"></i> +91 9142624636
+              </li>
+              <li>
+                <i className="fas fa-print mr-3"></i> +91 7855016610
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>&copy; 2024 Your E-Commerce Store. All rights reserved.</p>
+      <div className="background">
+        {/* Your SVG or background wave goes here */}
       </div>
- 
 
-      </>
-    </div>
-  )
-}
+      <div
+        className="text-center p-3"
+        style={{ backgroundColor: "rgba(75, 150, 60, 0.2)" }}
+      >
+        © 2023 project:
+        <a className="text-white" href="#">
+          mandi.com
+        </a>
+      </div>
+    </footer>
+  );
+};
 
-export default footer
+export default Footer;

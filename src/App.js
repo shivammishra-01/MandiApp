@@ -4,11 +4,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar.js";
 import Alert from "./components/mandi/Alert.js";
 import Card from "./components/mandi/Card.js";
+import Footer from "./components/Layout/Footer.js";
 import Login from "./components/Home/Login.js";
 import Home from "./components/Layout/Home.js";
 import Signup from "./components/Home/Signup.js";
 import Contact from "./components/mandi/Contact.js";
 import Animals from "./components/Animals/Animals.js";
+import Anislider from "./components/Animals/Anislider.js";
+import AniCard from "./components/Animals/AniCard.js";
 import Crops from "./components/Crops/Crops.js";
 import Fertilizer from "./components/Fertilizer/Fertilizer.js";
 
@@ -28,8 +31,10 @@ function App() {
           <Route path="/Animals" element={<Animals />}></Route>
           <Route path="/Crops" element={<Crops />}></Route>
           <Route path="/Fertilizer" element={<Fertilizer />}></Route>
-          <Route path="/allanimal" element={<Animals />}></Route>
+          <Route path="/Anislider" element={<Anislider />}></Route>
+          <Route path="/AniCard" element={<AniCard />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

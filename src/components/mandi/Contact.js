@@ -5,7 +5,8 @@ import far from "../img/about.gif";
 const Contact = () => {
   return (
     <div>
-      <div className="container">
+      
+      {/* <div className="container">
         <div>
           <h2>
             <center>ℂ𝕠𝕟𝕥𝕒𝕔𝕥 𝕌𝕤</center>
@@ -60,7 +61,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

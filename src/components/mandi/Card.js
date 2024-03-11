@@ -6,10 +6,10 @@ export default function Card() {
   return (
     <div className="mt-5">
       <header className={cardstyle.header}>
-        <h1>Recently Added Animals</h1>
+        <h1>ℕ𝔼𝕎𝕃𝕐 𝔸𝔻𝔻𝔼𝔻 𝕃𝕀𝕍𝔼𝕊𝕋𝕆ℂ𝕂 𝕆𝔽 ℂℝ𝕆ℙ𝕊</h1>
         <p>
           <span>
-            <Link to="/allanimal" className={cardstyle.link}>
+            <Link to="/Crops" className={cardstyle.link}>
               <i className="fa-solid fa-eye"></i> VIEW ALL
             </Link>
           </span>
@@ -235,10 +235,10 @@ export default function Card() {
       </section>
 
       <header className={cardstyle.header}>
-        <h1>Recently Added Fertilizer</h1>
+        <h1>ℕ𝔼𝕎𝕃𝕐 𝔸𝔻𝔻𝔼𝔻 𝕃𝕀𝕍𝔼𝕊𝕋𝕆ℂ𝕂 𝕆𝔽 𝔸ℕ𝕀𝕄𝔸𝕃𝕊</h1>
         <p>
           <span>
-            <Link to="/allanimal" className={cardstyle.link}>
+            <Link to="/Animals" className={cardstyle.link}>
               <i className="fa-solid fa-eye"></i> VIEW ALL
             </Link>
           </span>
@@ -247,25 +247,33 @@ export default function Card() {
       <section>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?grayscale" alt="" />
+            <img src="https://source.unsplash.com/random/600x400?cow" alt="" />
           </picture>
           <div className={cardstyle.detail}>
             <p>
-              <b>Product One</b>
+              <b>Murrah Buffalo</b>
               <br />
-              <small>New arrival</small>
+              <small>Age: 2 years</small>
+              <br />
+              <small>Milk: 20L</small>
             </p>
             <samp>$45.00</samp>
           </div>
           <div className={cardstyle.button}>
             <a className={cardstyle.anchor} href="#">
-              Add-cart
+              {/* <button>Add-cart</button> */}
+              <button type="button" className="btn btn-primary">
+                Buy / Book Now
+              </button>
             </a>
           </div>
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?cow" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?buffalo"
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -277,13 +285,15 @@ export default function Card() {
           </div>
           <div className={cardstyle.button}>
             <a className={cardstyle.anchor} href="#">
-              Add-cart
+              <button type="button" className="btn btn-primary">
+                Buy / Book Now
+              </button>
             </a>
           </div>
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?dog" alt="" />
+            <img src="https://source.unsplash.com/random/600x400?goat" alt="" />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -301,7 +311,10 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?grayscale" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?sheep"
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -319,7 +332,7 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="image/watch.png" alt="" />
+            <img src="https://source.unsplash.com/random/600x400?goat" alt="" />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -337,7 +350,7 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://source.unsplash.com/user/c_v_r/1900x800" alt="" />
+            <img src="https://source.unsplash.com/random/600x400?calf" alt="" />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -355,7 +368,10 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://source.unsplash.com/user/c_v_r/1900x800" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?buffalo"
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -373,7 +389,10 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://source.unsplash.com/user/c_v_r/1900x800" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?buffalocalf"
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -463,10 +482,10 @@ export default function Card() {
         </div>
       </section>
       <header className={cardstyle.header}>
-        <h1>Recently Added Animals</h1>
+        <h1>ℕ𝔼𝕎𝕃𝕐 𝔸𝔻𝔻𝔼𝔻 𝕃𝕀𝕍𝔼𝕊𝕋𝕆ℂ𝕂 𝕆𝔽 𝔽𝔼ℝ𝕋𝕀𝕃𝕀ℤ𝔼ℝ𝕊</h1>
         <p>
           <span>
-            <Link to="/allanimal" className={cardstyle.link}>
+            <Link to="/Fertilizers" className={cardstyle.link}>
               <i className="fa-solid fa-eye"></i> VIEW ALL
             </Link>
           </span>
@@ -475,7 +494,10 @@ export default function Card() {
       <section>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?grayscale" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?fertilizers"
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -493,7 +515,7 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?cow" alt="" />
+            <img src="https://source.unsplash.com/random/600x400?rice" alt="" />
           </picture>
           <div className={cardstyle.detail}>
             <p>
@@ -511,7 +533,10 @@ export default function Card() {
         </div>
         <div className={cardstyle.product}>
           <picture>
-            <img src="https://picsum.photos/200/300?dog" alt="" />
+            <img
+              src="https://source.unsplash.com/random/600x400?pulses "
+              alt=""
+            />
           </picture>
           <div className={cardstyle.detail}>
             <p>
