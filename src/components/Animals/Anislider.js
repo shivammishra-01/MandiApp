@@ -10,7 +10,6 @@ import sc5 from "../img/All.gif";
 import "./css/Animals.css";
 
 const anislider = () => {
-  
   return (
     <div>
       <center>
@@ -111,7 +110,6 @@ const anislider = () => {
         </div>
       </div>
     </div>
-   
   );
 };
 

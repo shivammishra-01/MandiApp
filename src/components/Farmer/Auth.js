@@ -1,6 +1,6 @@
 export const isLoggedIn = () => {
-    return false;
-}
+  return true;
+};
 export const FarmerData = () => {
-    return { result: "Abhishek" };
-}
+  return { result: "Abhishek" };
+};
