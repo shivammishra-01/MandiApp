@@ -49,7 +49,7 @@ export default function Navbar() {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/Contact"
+                  to="/Service"
                 >
                   <i className="fa-brands fa-servicestack"></i> Service
                 </Link>
