@@ -53,19 +53,50 @@ export default function Navbar() {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/Contact"
+                  to="/Service"
                 >
                   <i className="fa-brands fa-servicestack"></i> Service
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  aria-current="page"
-                  to="/Contact"
+
+              {/* Dropdown */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   <i className="fa-solid fa-cart-shopping"></i> Product
-                </Link>
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <Link className="dropdown-item" to="/Crops">
+                      <center>
+                        {/* <i class="fa-solid fa-wheat-awn"></i> */}
+                        𝐂𝐫𝐨𝐩𝐬
+                      </center>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/Animals">
+                      <center>
+                        {/* <i class="fa-solid fa-cow"></i> */}
+                        𝐀𝐧𝐢𝐦𝐚𝐥𝐬
+                      </center>
+                    </Link>
+                    <Link className="dropdown-item" to="/Fertilizers">
+                      <center>
+                        {" "}
+                        <i class="fa-sharp fa-thin fa-bag-seedling"></i>
+                        𝐟𝐞𝐫𝐭𝐢𝐥𝐢𝐳𝐞𝐫𝐬
+                      </center>
+                    </Link>
+                  </li>
+                  {/* Add more dropdown items as needed */}
+                </ul>
               </li>
               {isLoggedIn() ? (
                 ""

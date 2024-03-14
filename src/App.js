@@ -11,12 +11,15 @@ import Crops from "./components/Crops/Crops.js";
 import Fertilizer from "./components/Fertilizer/Fertilizer.js";
 import PrivateRoute from "./components/Farmer/PrivateRoute/PrivateRoute.js";
 import DashBoard from "./components/Farmer/DashBoard.js";
-
+import Service from "./components/service/Service.js";
+import About from "./components/About/About.js";
+import Footer from "./components/Layout/Footer.js";
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+       
 
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -30,7 +33,10 @@ function App() {
           <Route path="/Crops" element={<Crops />}></Route>
           <Route path="/Fertilizer" element={<Fertilizer />}></Route>
           <Route path="/allanimal" element={<Animals />}></Route>
+          <Route path="/Service" element={<Service />}></Route>
+          <Route path="/About" element={<About />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

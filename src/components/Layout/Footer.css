@@ -23,3 +23,10 @@
 @media (max-width: 768px) {
   /* Add additional styling for smaller screens if needed */
 }
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
