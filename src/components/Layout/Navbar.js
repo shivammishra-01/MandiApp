@@ -75,7 +75,7 @@ export default function Navbar() {
                   <li>
                     <Link className="dropdown-item" to="/Crops">
                       <center>
-                        {/* <i class="fa-solid fa-wheat-awn"></i> */}
+                        {/* <i className="fa-solid fa-wheat-awn"></i> */}
                         𝐂𝐫𝐨𝐩𝐬
                       </center>
                     </Link>
@@ -83,14 +83,14 @@ export default function Navbar() {
                   <li>
                     <Link className="dropdown-item" to="/Animals">
                       <center>
-                        {/* <i class="fa-solid fa-cow"></i> */}
+                        {/* <i className="fa-solid fa-cow"></i> */}
                         𝐀𝐧𝐢𝐦𝐚𝐥𝐬
                       </center>
                     </Link>
                     <Link className="dropdown-item" to="/Fertilizers">
                       <center>
                         {" "}
-                        <i class="fa-sharp fa-thin fa-bag-seedling"></i>
+                        <i className="fa-sharp fa-thin fa-bag-seedling"></i>
                         𝐟𝐞𝐫𝐭𝐢𝐥𝐢𝐳𝐞𝐫𝐬
                       </center>
                     </Link>
@@ -123,9 +123,9 @@ export default function Navbar() {
                 </>
               )}
               {isLoggedIn() ? (
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -133,14 +133,14 @@ export default function Navbar() {
                   >
                     {FarmerData().result}
                   </a>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
-                      <Link class="dropdown-item" to="/profile">
+                      <Link className="dropdown-item" to="/profile">
                         Profile
                       </Link>
                     </li>
                     <li>
-                      <Link class="dropdown-item" to="#">
+                      <Link className="dropdown-item" to="#">
                         Logout
                       </Link>
                     </li>

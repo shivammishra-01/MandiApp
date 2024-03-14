@@ -269,9 +269,9 @@ export default function Card() {
         </p>
       </header>
       <section>
-        {aniaml.map((Element) => {
+        {aniaml.map((Element,index) => {
           return (
-            <div className={cardstyle.product}>
+            <div key={index} className={cardstyle.product}>
               <picture>
                 <img src="https://source.unsplash.com/random/600x400?cow" alt="" />
               </picture>

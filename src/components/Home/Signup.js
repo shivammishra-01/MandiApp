@@ -146,8 +146,22 @@ export default function Signup(props) {
             else {
                 const farmer = { name, email, password, number, farmeradhar, image, farmerid, diss, state, mandiname, longitute, latitude };
                 try {
-                    const res = axios.post('http://localhost:8080/api/farmer', farmer, { headers: { 'Content-Type': 'application/json' } });
-                    console.log(res);
+                    const res = await axios.post('http://localhost:8080/api/farmer', farmer, { headers: { 'Content-Type': 'application/json' } });
+                    if(res.status===200){
+                        toast.success('Registration Done..!', {
+                            position: "top-center",
+                            autoClose: 1000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "colored",
+                        });
+                    }
+                    setTimeout(() => {
+                        navigate('/login');
+                    }, 1500);
                 } catch (error) {
                     toast.error('Something is Wrong..!', {
                         position: "top-center",
