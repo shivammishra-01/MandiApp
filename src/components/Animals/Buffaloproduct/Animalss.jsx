@@ -1,7 +1,7 @@
 // App.jsx
 
 import React, { useState } from "react";
-import "../css/Animalss.css";
+import "./Animalss.css";
 import murrah from "../img/shivam.png";
 
 function Animalss() {

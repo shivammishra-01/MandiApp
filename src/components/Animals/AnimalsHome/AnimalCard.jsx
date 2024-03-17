@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/AnimalCard.css";
-
+import "./css/AnimalCard.css";
+import { Link } from "react-router-dom";
 import murrah from "../img/cows.jpg";
 
 const AnimalCard = () => {
@@ -59,7 +59,10 @@ const AnimalCard = () => {
           Newly Added Cows Livestock
         </h1>
         <h2 className="view_all">
-          <i class="fas fa-eye"></i>view All
+          <i class="fas fa-eye"></i>
+          <Link to="/" style={{ textDecoration: "none", color: "#4caf50" }}>
+            view All
+          </Link>
         </h2>
       </div>
       <Slider {...settings}>

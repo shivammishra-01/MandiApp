@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/AnimalsNav.css";
+import "./css/AnimalsNav.css";
 
 const AnimalNav = () => {
   return (

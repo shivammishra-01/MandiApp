@@ -2,7 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/AnimalCard.css";
+import "./css/AnimalCard.css";
+import { Link } from "react-router-dom";
 
 import murrah from "../img/goat.jpeg";
 
@@ -56,69 +57,86 @@ const Goatcard = () => {
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          Newly Added Cows Livestock
+          Newly Added Goats Livestock
         </h1>
         <h2 className="view_all">
-          <i class="fas fa-eye"></i>view All
+          <i class="fas fa-eye"></i>
+          <Link to="/" style={{ textDecoration: "none", color: "#4caf50" }}>
+            view All
+          </Link>
         </h2>
       </div>
       <Slider {...settings}>
-      <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
-    <div className="custom-product-card">
-      <img src={murrah} alt="Product" className="custom-product-image" />
-      <div className="custom-product-info">
-        <h3 className="custom-product-title">Product Title</h3>
-        <p className="custom-product-description">Description of the product goes here.</p>
-        <button className="custom-add-to-cart-btn">Add to Cart</button>
-      </div>
-    </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            <h3 className="custom-product-title">Product Title</h3>
+            <p className="custom-product-description">
+              Description of the product goes here.
+            </p>
+            <button className="custom-add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
       </Slider>
     </div>
   );

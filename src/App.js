@@ -14,6 +14,7 @@ import DashBoard from "./components/Farmer/DashBoard.js";
 import Service from "./components/service/Service.js";
 import About from "./components/About/About.js";
 import Footer from "./components/Layout/Footer.js";
+import Product from "./components/Animals/Buffaloproduct/Product.jsx";
 function App() {
   return (
     <>
@@ -34,6 +35,7 @@ function App() {
           <Route path="/allanimal" element={<Animals />}></Route>
           <Route path="/Service" element={<Service />}></Route>
           <Route path="/About" element={<About />}></Route>
+          <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
         </Routes>
         <Footer />
       </Router>
