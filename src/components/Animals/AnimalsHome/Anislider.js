@@ -1,21 +1,19 @@
 import React from "react";
 import cow from "../img/cows1.jpg";
-import goat from "../img/goat.jpg";
-import buff from "../img/buff.jpg";
-import sc1 from "../img/anime_cow.gif";
-import sc2 from "../img/anime_buffallo.gif";
-import sc3 from "../img/anime_goat.gif";
-import sc4 from "../img/anime_sheep.gif";
-import sc5 from "../img/All.gif";
-import "./css/Animals.css";
+// import goat from "../img/goat.jpg";
+// import buff from "../img/buff.jpg";
+// import sc1 from "../img/anime_cow.gif";
+// import sc2 from "../img/anime_buffallo.gif";
+// import sc3 from "../img/anime_goat.gif";
+// import sc4 from "../img/anime_sheep.gif";
+// import sc5 from "../img/All.gif";
+// import "./css/Animals.css";
 
 const anislider = () => {
   return (
     <div>
-      <center>
-        <h1>🎀 𝒲𝑒𝓁𝒸☯𝓂𝑒 𝓉❀ 𝒜𝓃𝒾𝓂𝒶𝓁 𝒫𝒶𝑔𝑒𝓈 🎀</h1>
-      </center>
-      <div className="container">
+      <center>{/* <h1>🎀 𝒲𝑒𝓁𝒸☯𝓂𝑒 𝓉❀ 𝒜𝓃𝒾𝓂𝒶𝓁 𝒫𝒶𝑔𝑒𝓈 🎀</h1> */}</center>
+      <div className="containerr">
         <div
           id="carouselExampleAutoplaying"
           className="carousel slide"
@@ -27,11 +25,11 @@ const anislider = () => {
             </div>
             <div className="carousel-caption d-none d-md-block"></div>
             <div className="carousel-item">
-              <img src={goat} className="d-block w-100 h-50" alt="..." />
+              <img src={cow} className="d-block w-100 h-50" alt="..." />
             </div>
             <div className="carousel-caption d-none d-md-block"></div>
             <div className="carousel-item">
-              <img src={buff} className="d-block w-100 h-50" alt="..." />
+              <img src={cow} className="d-block w-100 h-50" alt="..." />
             </div>
             <div className="carousel-caption d-none d-md-block">
               {/* <h2>welcome to cows mandi</h2> */}
@@ -63,7 +61,7 @@ const anislider = () => {
           </button>
         </div>
         {/* smallcard */}
-        <div className="row">
+        {/* <div className="row">
           <div className="column">
             <div className="smallcard">
               <img src={sc5} alt="John" />
@@ -107,7 +105,7 @@ const anislider = () => {
               </h6>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

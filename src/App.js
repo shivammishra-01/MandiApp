@@ -6,7 +6,7 @@ import Login from "./components/Home/Login.js";
 import Home from "./components/Layout/Home.js";
 import Signup from "./components/Home/Signup.js";
 import Contact from "./components/mandi/Contact.js";
-import Animals from "./components/Animals/Animals.js";
+import Animals from "./components/Animals/AnimalsHome/Animals.js";
 import Crops from "./components/Crops/Crops.js";
 import Fertilizer from "./components/Fertilizer/Fertilizer.js";
 import PrivateRoute from "./components/Farmer/PrivateRoute/PrivateRoute.js";
@@ -19,7 +19,6 @@ function App() {
     <>
       <Router>
         <Navbar />
-       
 
         <Routes>
           <Route path="/" element={<Home />}></Route>

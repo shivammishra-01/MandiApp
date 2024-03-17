@@ -1,4 +1,4 @@
-.column {
+/* .column {
   float: left;
   width: 20%;
   padding: 0 10px;
@@ -33,4 +33,113 @@ a:hover {
   opacity: 0.7;
 }
 
+ */
 
+/* Style for the container */
+.container {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Style for the left part */
+.left {
+  width: 20%; /* Adjust width as needed */
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px; /* Add some padding for content */
+}
+
+/* Style for the menu button */
+.menu-button {
+  display: none; /* Hide by default */
+}
+
+/* Style for the right part */
+.right {
+  width: 80%; /* Adjust width as needed */
+  background-color: #e0e0e0; /* Lighter gray background */
+  padding: 75px; /* Add some padding for content */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style for product card */
+.product-card {
+  width: calc(100% - 20px); /* Adjust width as needed */
+  max-width: calc(60% - 5px); /* Two cards per row in desktop mode */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for buttons */
+button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .left {
+    display: none; /* Hide left side by default on mobile */
+  }
+  .menu-button {
+    display: block; /* Show menu button on mobile */
+    position: fixed;
+    top: 10px;
+    left: 55%;
+    z-index: 1000;
+  }
+  .container.show-left .left {
+    display: block; /* Show left side when .show-left class is added */
+  }
+  .container.show-left .right {
+    width: 100%; /* Make right side occupy full width when left side is shown */
+  }
+
+  /* Adjust product card width for mobile */
+  .product-card {
+    width: calc(50% - 20px); /* Two cards per row on mobile */
+  }
+}
+
+/* Media query for tablets and larger */
+@media (min-width: 768px) {
+  /* Adjust product card width for tablets and larger screens */
+  .product-card {
+    width: calc(
+      50% - 20px
+    ); /* Two cards per row on tablets and larger screens */
+  }
+}
+
+/* Adjust product card width for mobile */
+.product-card {
+  width: calc(100% - 20px); /* Full width on mobile */
+}
+
+/* Media query for tablets and larger */
+@media (min-width: 768px) {
+  /* Adjust product card width for tablets and larger screens */
+  .product-card {
+    width: calc(
+      25.33% - 20px
+    ); /* Three cards per row on tablets and larger screens */
+  }
+}
