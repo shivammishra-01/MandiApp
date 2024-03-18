@@ -90,7 +90,7 @@ const MandiAnimals = () => {
               </span>
             </p>
 
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">

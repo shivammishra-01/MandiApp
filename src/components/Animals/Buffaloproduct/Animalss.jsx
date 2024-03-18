@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "./Animalss.css";
 import murrah from "../img/shivam.png";
+import Buffalo from "../img/buffalo.jpg";
 
 function Animalss() {
   const [showLeft, setShowLeft] = useState(false);
@@ -162,292 +163,213 @@ function Animalss() {
             data-category="clothing"
             data-brand="Murrah"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Cows</h3>
-            <p>Breeds is Murrah</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={Buffalo} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={Buffalo} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={Buffalo} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Buffalo</h3>
-            <p>Price:120</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={Buffalo} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={Buffalo} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={murrah} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={murrah} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={murrah} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
           <div
             className="product-card"
             data-category="electronics"
             data-brand="apple"
           >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-          <div
-            className="product-card"
-            data-category="electronics"
-            data-brand="apple"
-          >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-          <div
-            className="product-card"
-            data-category="electronics"
-            data-brand="apple"
-          >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-          <div
-            className="product-card"
-            data-category="electronics"
-            data-brand="apple"
-          >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-          <div
-            className="product-card"
-            data-category="electronics"
-            data-brand="apple"
-          >
-            <img src={murrah} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
-            <button
-              style={{
-                backgroundColor: "#007bff",
-                color: "white",
-                padding: "10px 20px",
-                border: "none",
-                borderRadius: "5px",
-                cursor: "pointer",
-                marginRight: "10px",
-              }}
-            >
-              Add to Cart
-            </button>
+            <img src={murrah} alt="Product" className="custom-product-image" />
+            <div className="custom-product-info">
+              <h4 className="custom-product-title">Product Name</h4>
+              <p className="custom-product-description">
+                <strong>Place:</strong>Name
+              </p>
+              <p className="custom-product-description">
+                <strong>Quality:</strong> 10L/Day
+              </p>
+              <p className="custom-product-description">
+                <strong>Price:</strong>₹ 90,000
+              </p>
+              <p className="custom-product-description">
+                <strong>Age:</strong> 5year(s)
+              </p>
+              <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            </div>
           </div>
         </div>
       </div>
       <div style={{ textAlign: "center", margin: "20px 0" }}>
         <span>Page 2 of 286</span>
-        <button>PREVIOUS</button>
+        <buttonz>PREVIOUS</buttonz>
         {Array.from({ length: 10 }, (_, i) => (
           <button key={i + 1}>{i + 1}</button>
         ))}

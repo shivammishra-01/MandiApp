@@ -76,7 +76,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -86,7 +86,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -96,7 +96,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -106,7 +106,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -116,7 +116,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -126,7 +126,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
@@ -136,7 +136,7 @@ const Buffalocard = () => {
             <p className="custom-product-description">
               Description of the product goes here.
             </p>
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
+            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
       </Slider>
