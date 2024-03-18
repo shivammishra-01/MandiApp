@@ -9,7 +9,7 @@ import murrah from "../img/goat.jpeg";
 
 const Goatcard = () => {
   const settings = {
-    dots: true,
+    // dots: true,
     speed: 500,
     slidesToShow: calculateSlidesToShow(), // Adjust slidesToShow dynamically
     slidesToScroll: 1,
@@ -24,13 +24,13 @@ const Goatcard = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 845,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 550,
         settings: {
           slidesToShow: 1,
         },
@@ -43,8 +43,8 @@ const Goatcard = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1024) {
       return 5;
-    } else if (screenWidth >= 600) {
-      return 3;
+    } else if (screenWidth >= 845) {
+      return 2;
     } else {
       return 1;
     }
@@ -70,71 +70,169 @@ const Goatcard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h3 className="custom-product-title">Product Title</h3>
+            <h6 className="custom-product-title">Product Name</h6>
             <p className="custom-product-description">
-              Description of the product goes here.
+              <strong>Place:</strong>Name
             </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10L/Day
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 90,000
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Age:</strong> 5year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
           </div>
         </div>
       </Slider>

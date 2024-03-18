@@ -1,0 +1,19 @@
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+      position: fixed;
+      top: 56px; /* Adjust this value if your navbar height is different */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 56px); /* Adjust this value if your navbar height is different */
+      overflow-y: auto;
+      background-color: #f8f9fa; /* Adjust background color as needed */
+      transition: transform 0.3s ease;
+      z-index: 1001;
+      transform: translateX(-100%);
+    }
+  
+    .navbar-collapse.show {
+      transform: translateX(0);
+    }
+  }
+  

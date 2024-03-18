@@ -19,13 +19,13 @@ const MandiCrops = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -41,9 +41,9 @@ const MandiCrops = () => {
   function calculateSlidesToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1024) {
-      return 5;
-    } else if (screenWidth >= 600) {
       return 3;
+    } else if (screenWidth >= 600) {
+      return 2;
     } else {
       return 1;
     }
@@ -108,7 +108,6 @@ const MandiCrops = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
               <strong>Maize</strong>
             </p>
@@ -117,7 +116,6 @@ const MandiCrops = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
               <strong>Millets</strong>
             </p>
@@ -126,7 +124,6 @@ const MandiCrops = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
               <strong>Oilseeds</strong>
             </p>

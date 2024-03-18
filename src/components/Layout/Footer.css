@@ -4,14 +4,16 @@
   background-color: #00a651;
   color: #fff;
   padding: 50px 0;
+  margin-top: 40px;
 }
 
-.footer h6 {
+.head {
   color: #64f357;
+  text-align: center;
   /* text-align: center; */
 }
 
-.footer a {
+.para {
   color: #fff;
   text-align: center;
 }
@@ -29,4 +31,3 @@
   opacity: 1;
   visibility: visible;
 }
-

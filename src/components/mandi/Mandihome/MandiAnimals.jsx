@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../css/MandiCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/card2 (2).jpg";
+// import cows from "../img/anime_cow.gif"
 
 const MandiAnimals = () => {
   const settings = {
@@ -19,13 +20,13 @@ const MandiAnimals = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -41,9 +42,9 @@ const MandiAnimals = () => {
   function calculateSlidesToShow() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1024) {
-      return 5;
-    } else if (screenWidth >= 600) {
       return 3;
+    } else if (screenWidth >= 600) {
+      return 2;
     } else {
       return 1;
     }
