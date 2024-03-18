@@ -56,7 +56,7 @@ const Mandifertilizer = () => {
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          Newly Added Fertilizers Livestock
+          These Types Fertilizers Are Available
         </h1>
         <h2 className="view_all">
           <i class="fas fa-eye"></i>
@@ -72,139 +72,64 @@ const Mandifertilizer = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Paddy:</strong>
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Wheat:</strong>
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Pulse:</strong>Name
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <strong>Price:</strong>₹ 90,000
-            </p>
-            <p className="custom-product-description">
-              <strong>Age:</strong> 5year(s)
-            </p>
-            <button className="custom-add-to-cart-btn">Buy/Books Now</button>
           </div>
         </div>
       </Slider>
