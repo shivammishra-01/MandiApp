@@ -57,7 +57,7 @@ const MandiAnimals = () => {
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          These Types Animals Are Available
+          These Types Animals Are Availables
         </h1>
         <h2 className="view_all">
           <i class="fas fa-eye"></i>

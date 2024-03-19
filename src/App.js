@@ -38,6 +38,7 @@ function App() {
           <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
         </Routes>
         <Footer />
+        
       </Router>
     </>
   );

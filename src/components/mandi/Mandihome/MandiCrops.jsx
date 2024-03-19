@@ -56,7 +56,7 @@ const MandiCrops = () => {
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          These Types Crops Are Available
+          These Types Crops Are Availables
         </h1>
         <h2 className="view_all">
           <i class="fas fa-eye"></i>

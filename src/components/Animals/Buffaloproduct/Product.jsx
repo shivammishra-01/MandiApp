@@ -1,13 +1,13 @@
 import React from "react";
-// import Animalss from "../Buffaloproduct/Animalss";
+import Animalss from "../Buffaloproduct/Animalss";
 // import Cowproduct from "../Cowsproduct/Cowproduct";
-import Goatproduct from "../Goatproduct/Goatproduct";
+// import Goatproduct from "../Goatproduct/Goatproduct";
 const Product = () => {
   return (
     <div>
-      {/* <Animalss /> */}
+      <Animalss />
       {/* <Cowproduct /> */}
-      <Goatproduct />
+      {/* <Goatproduct /> */}
     </div>
   );
 };
