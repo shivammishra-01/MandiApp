@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "../css/MandiCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/Crops.jpeg";
+import wheat from "../img/wheat.jpg";
+import pulses from "../img/pulses.jpg";
+// import mustard from "../img/mustard.png";
 
 const MandiCrops = () => {
   const settings = {
@@ -79,16 +82,16 @@ const MandiCrops = () => {
           </div>
         </div>
         <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={pulses} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
-              <strong>Pulse</strong>
+              <strong>Pulses</strong>
             </p>
           </div>
         </div>
         <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={wheat} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">

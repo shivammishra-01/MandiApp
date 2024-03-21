@@ -15,6 +15,7 @@ import Service from "./components/service/Service.js";
 import About from "./components/About/About.js";
 import Footer from "./components/Layout/Footer.js";
 import Product from "./components/Animals/Buffaloproduct/Product.jsx";
+import Profile from "./components/Dashboard/Farmer/Profile.js";
 function App() {
   return (
     <>
@@ -36,9 +37,9 @@ function App() {
           <Route path="/Service" element={<Service />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
+          <Route path="/Profile" element={<Profile />}></Route>
         </Routes>
         <Footer />
-        
       </Router>
     </>
   );
