@@ -72,7 +72,7 @@ const MandiCrops = () => {
         </h2>
       </div>
       <Slider {...settings}>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -81,7 +81,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={pulses} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
@@ -90,7 +90,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={wheat} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
@@ -99,7 +99,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
@@ -108,7 +108,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">
@@ -116,7 +116,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">
@@ -124,7 +124,7 @@ const MandiCrops = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">

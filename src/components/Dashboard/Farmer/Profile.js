@@ -1,7 +1,12 @@
 import React from "react";
+// import DashNav from "./DashNav";
 
 const Profile = () => {
-  return <div>welcome to profile</div>;
+  return (
+    <div>
+      {/* <DashNav /> */}
+    </div>
+  );
 };
 
 export default Profile;

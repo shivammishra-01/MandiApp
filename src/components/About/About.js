@@ -3,8 +3,11 @@ import React, { useEffect } from "react";
 const About = () => {
   return (
     <>
-      <div className="font" style={{ backgroundColor: "#FEFCFF" }}>
-        <div className="container" style={{ backgroundColor: "#FEFCFF" }}>
+      <div className="font" style={{ backgroundColor: "#C7F6C7" }}>
+        <div
+          className="container"
+          style={{ marginRight: "100px", marginLeft: "100px" }}
+        >
           <div className="about" id="about">
             <h3
               style={{

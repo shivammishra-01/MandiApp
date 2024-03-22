@@ -69,7 +69,7 @@ const Mandifertilizer = () => {
         </h2>
       </div>
       <Slider {...settings}>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -78,7 +78,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -87,7 +87,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -96,7 +96,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -105,7 +105,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -114,7 +114,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -123,7 +123,7 @@ const Mandifertilizer = () => {
             </p>
           </div>
         </div>
-        <div className="custom-product-card">
+        <div className="custom-product-cards">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
