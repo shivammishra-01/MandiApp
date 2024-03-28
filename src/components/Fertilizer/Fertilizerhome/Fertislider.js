@@ -1,7 +1,9 @@
 import React from "react";
-import cow from "../img/cows1.jpg";
+import cow from "../img/fert1 (1).webp";
+import fer2 from "../img/fer2.png";
+import fer3 from "../img/fer3.png";
 
-const anislider = () => {
+const Fertislider = () => {
   return (
     <div>
       <div className="containerr">
@@ -10,17 +12,17 @@ const anislider = () => {
           className="carousel slide"
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner">
+          <div className="carousel-inner ">
             <div className="carousel-item active">
-              <img src={cow} className="d-block w-100" alt="..." />
+              <img src={cow} className="d-block w-100 " alt="..." />
             </div>
             <div className="carousel-caption d-none d-md-block"></div>
             <div className="carousel-item">
-              <img src={cow} className="d-block w-100 h-50" alt="..." />
+              <img src={fer2} className="d-block w-100 h-50" alt="..." />
             </div>
             <div className="carousel-caption d-none d-md-block"></div>
             <div className="carousel-item">
-              <img src={cow} className="d-block w-100 h-50" alt="..." />
+              <img src={fer3} className="d-block w-100 h-50" alt="..." />
             </div>
             <div className="carousel-caption d-none d-md-block">
               {/* <h2>welcome to cows mandi</h2> */}
@@ -51,10 +53,9 @@ const anislider = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        
       </div>
     </div>
   );
 };
 
-export default anislider;
+export default Fertislider;

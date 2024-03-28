@@ -87,7 +87,7 @@ export default function Navbar() {
                         𝐀𝐧𝐢𝐦𝐚𝐥𝐬
                       </center>
                     </Link>
-                    <Link className="dropdown-item" to="/Fertilizers">
+                    <Link className="dropdown-item" to="/Fertilizer">
                       <center>
                         {" "}
                         <i className="fa-sharp fa-thin fa-bag-seedling"></i>

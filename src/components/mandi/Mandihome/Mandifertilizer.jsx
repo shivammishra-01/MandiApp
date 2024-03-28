@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../css/MandiCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/card3.jpg";
+import urea from "../img/urea.jpg";
 
 const Mandifertilizer = () => {
   const settings = {
@@ -70,7 +71,7 @@ const Mandifertilizer = () => {
       </div>
       <Slider {...settings}>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={urea} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">

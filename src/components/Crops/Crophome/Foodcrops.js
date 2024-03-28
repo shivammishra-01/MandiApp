@@ -2,11 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./css/AnimalCard.css";
+import "../css/CropCard.css";
 import { Link } from "react-router-dom";
-import murrah from "../img/cows.jpg";
 
-const AnimalCard = () => {
+import murrah from "../img/Crops.jpeg";
+
+const Foodcrops = () => {
   const settings = {
     // dots: true,
     speed: 500,
@@ -50,19 +51,20 @@ const AnimalCard = () => {
   }
 
   return (
-    
     <div>
-      
       <div className="header">
         <h1 className="sec_title">
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          Newly Added Cows Livestock
+          Newly Added Foodcrops Livestock
         </h1>
         <h2 className="view_all">
           <i class="fas fa-eye"></i>
-          <Link to="/Animals/Cows/Product" style={{ textDecoration: "none", color: "#4caf50" }}>
+          <Link
+            to="/Crops/Foodcrops/Product"
+            style={{ textDecoration: "none", color: "#4caf50" }}
+          >
             view All
           </Link>
         </h2>
@@ -71,16 +73,16 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -95,16 +97,40 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
+              </span>
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Times:</strong> 1year(s)
+              </span>
+            </p>
+
+            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
+          </div>
+        </div>
+        <div className="custom-product-card">
+          <img src={murrah} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
+            <p className="custom-product-description">
+              <strong>Place:</strong>Name
+            </p>
+            <p className="custom-product-description">
+              <strong>Qua:</strong> 10000 Kg
+            </p>
+            <p className="custom-product-description">
+              <span className="nowrap">
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -119,16 +145,16 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -143,16 +169,16 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -167,16 +193,16 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -191,40 +217,16 @@ const AnimalCard = () => {
         <div className="custom-product-card">
           <img src={murrah} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
               <strong>Place:</strong>Name
             </p>
             <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
+              <strong>Qua:</strong> 10000 Kg
             </p>
             <p className="custom-product-description">
               <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
+                <strong>Price:</strong>₹ 18 Per Kg
               </span>
             </p>
             <p className="custom-product-description">
@@ -241,4 +243,4 @@ const AnimalCard = () => {
   );
 };
 
-export default AnimalCard;
+export default Foodcrops;
