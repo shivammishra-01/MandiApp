@@ -57,7 +57,7 @@ const Mandifertilizer = () => {
           <i class="fas fa-hourglass-half">
             {/* <i class="fas fa-caret-right"></i> */}
           </i>
-          These Types Fertilizers Are Availables
+          𝕋𝕙𝕖𝕤𝕖 𝕋𝕪𝕡𝕖𝕤 𝔽𝕖𝕣𝕥𝕚𝕝𝕚𝕫𝕖𝕣𝕤 𝔸𝕣𝕖 𝔸𝕧𝕒𝕚𝕝𝕒𝕓𝕝𝕖𝕤
         </h1>
         <h2 className="view_all">
           <i class="fas fa-eye"></i>

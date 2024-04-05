@@ -17,7 +17,15 @@ import Footer from "./components/Layout/Footer.js";
 import Cowproduct from "./components/Animals/Cowsproduct/Cowproduct.jsx";
 import Product from "./components/Animals/Buffaloproduct/Product.jsx";
 import Goatproduct from "./components/Animals/Goatproduct/Goatproduct.jsx";
-import Profile from "./components/Dashboard/Farmer/Profile.js";
+// import Profile from "./components/Dashboard/Profile.jsx";
+// Dashboard
+import Sidebar from "./components/Dashboard/components/Sidebar.jsx";
+import Dashboard from "./components/Dashboard/pages/Dashboard.jsx";
+import User from "./components/Dashboard/pages/UserList.jsx";
+import Analytics from "./components/Dashboard/pages/Analytics.jsx";
+import Comment from "./components/Dashboard/pages/Comment.jsx";
+import Userlist from "./components/Dashboard/pages/Product.jsx";
+import ProductList from "./components/Dashboard/pages/ProductList.jsx";
 function App() {
   return (
     <>
@@ -41,7 +49,16 @@ function App() {
           <Route path="Animals/Cows/Product" element={<Cowproduct />}></Route>
           <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
           <Route path="Animals/Goat/Product" element={<Goatproduct />}></Route>
-          <Route path="/Profile" element={<Profile />}></Route>
+          {/* <Route path="/Profile" element={<Profile />}></Route> */}
+          {/* Dashboard */}
+          <Route path="/Sidebar" element={<Sidebar />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/User" element={<User />} />
+          <Route path="/comment" element={<Comment />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/Userlist" element={<Userlist />} />
+          <Route path="/productList" element={<ProductList />} />
         </Routes>
         <Footer />
       </Router>
