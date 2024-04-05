@@ -5,7 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "../css/MandiCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/card2 (2).jpg";
-// import cows from "../img/anime_cow.gif"
+import Cows from "../img/cows.jpg";
+import Goat from "../img/goat (1).jpg";
+import buffalo from "../img/buffalo.jpg";
+import sheep from "../img/sheep.jpg";
 
 const MandiAnimals = () => {
   const settings = {
@@ -75,7 +78,25 @@ const MandiAnimals = () => {
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Place</strong>
+            </p>
+          </div>
+        </div>
+        <div className="custom-product-cards">
+          <img src={Cows} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            {/* <h4 className="custom-product-title">Product Name</h4> */}
+            <p className="custom-product-description">
+              <strong>Cow</strong>
+            </p>
+          </div>
+        </div>
+        <div className="custom-product-cards">
+          <img src={buffalo} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            {/* <h4 className="custom-product-title">Product Name</h4> */}
+            <p className="custom-product-description">
+              <strong>Buffalo</strong>
             </p>
           </div>
         </div>
@@ -84,7 +105,16 @@ const MandiAnimals = () => {
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Place</strong>
+            </p>
+          </div>
+        </div>
+        <div className="custom-product-cards">
+          <img src={sheep} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            {/* <h4 className="custom-product-title">Product Name</h4> */}
+            <p className="custom-product-description">
+              <strong>Sheep</strong>
             </p>
           </div>
         </div>
@@ -93,43 +123,16 @@ const MandiAnimals = () => {
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Place</strong>
             </p>
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={Goat} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-          </div>
-        </div>
-        <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-          </div>
-        </div>
-        <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-          </div>
-        </div>
-        <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h4 className="custom-product-title">Product Name</h4> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Goat</strong>
             </p>
           </div>
         </div>

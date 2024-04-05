@@ -6,6 +6,9 @@ import "../css/MandiCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/card3.jpg";
 import urea from "../img/urea.jpg";
+import Gro from "../img/Gro-fast.jpg";
+import potash from "../img/potass.jpg";
+import organic from "../img/organic.jpg";
 
 const Mandifertilizer = () => {
   const settings = {
@@ -62,7 +65,7 @@ const Mandifertilizer = () => {
         <h2 className="view_all">
           <i class="fas fa-eye"></i>
           <Link
-            to="/Fertilizers"
+            to="/Fertilizer"
             style={{ textDecoration: "none", color: "#4caf50" }}
           >
             view All
@@ -75,7 +78,7 @@ const Mandifertilizer = () => {
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Paddy:</strong>
+              <strong>Urea</strong>
             </p>
           </div>
         </div>
@@ -89,11 +92,11 @@ const Mandifertilizer = () => {
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={potash} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Pulse</strong>
+              <strong>Potash</strong>
             </p>
           </div>
         </div>
@@ -102,7 +105,16 @@ const Mandifertilizer = () => {
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Place</strong>
+            </p>
+          </div>
+        </div>
+        <div className="custom-product-cards">
+          <img src={Gro} alt="Product" className="custom-product-image" />
+          <div className="custom-product-info">
+            {/* <h6 className="custom-product-title">Product Name</h6> */}
+            <p className="custom-product-description">
+              <strong>Gr-Fasto</strong>
             </p>
           </div>
         </div>
@@ -111,25 +123,16 @@ const Mandifertilizer = () => {
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>Place</strong>
             </p>
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={organic} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h6 className="custom-product-title">Product Name</h6> */}
             <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-          </div>
-        </div>
-        <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
+              <strong>organic</strong>
             </p>
           </div>
         </div>

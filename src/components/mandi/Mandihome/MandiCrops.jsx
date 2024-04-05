@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 import murrah from "../img/Crops.jpeg";
 import wheat from "../img/wheat.jpg";
 import pulses from "../img/pulses.jpg";
-// import mustard from "../img/mustard.png";
+import Maize from "../img/corn.jpg";
+import mustard from "../img/mustard.png";
+import soyabean from "../img/soyabean.jpg";
+import oat from "../img/oat.jpg";
 
 const MandiCrops = () => {
   const settings = {
@@ -100,7 +103,7 @@ const MandiCrops = () => {
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={mustard} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             {/* <h4 className="custom-product-title">Product Name</h4> */}
             <p className="custom-product-description">
@@ -109,7 +112,7 @@ const MandiCrops = () => {
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={Maize} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">
               <strong>Maize</strong>
@@ -117,18 +120,18 @@ const MandiCrops = () => {
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={oat} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">
-              <strong>Millets</strong>
+              <strong>oat</strong>
             </p>
           </div>
         </div>
         <div className="custom-product-cards">
-          <img src={murrah} alt="Product" className="custom-product-image" />
+          <img src={soyabean} alt="Product" className="custom-product-image" />
           <div className="custom-product-info">
             <p className="custom-product-description">
-              <strong>Oilseeds</strong>
+              <strong>Soyabean</strong>
             </p>
           </div>
         </div>

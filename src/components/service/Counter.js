@@ -15,7 +15,9 @@ function Count() {
   const increaseCounter = (index) => {
     setCounters((prevCounters) => {
       const updatedCounters = [...prevCounters];
-      updatedCounters[index].value++;
+      if (updatedCounters[index].value < 100) {
+        updatedCounters[index].value++;
+      }
       return updatedCounters;
     });
   };
