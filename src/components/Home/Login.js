@@ -45,6 +45,12 @@ export default function Login() {
             try {
                 const res = await axios.post('http://localhost:8080/api/login', login, { headers: { 'Content-Type': 'application/json' } })
                 console.log(res)
+                if(res.status==200){
+                    localStorage.setItem("farmer",JSON.stringify(res.data))
+                }
+                else{
+                    alert("lll")
+                }
             } catch (error) {
                 console.log(error);
             }
