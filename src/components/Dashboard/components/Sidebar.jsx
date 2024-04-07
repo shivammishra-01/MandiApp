@@ -43,8 +43,8 @@ const Sidebar = ({ children }) => {
       icon: <FaShoppingBag />,
     },
     {
-      path: "/UploadProduct",
-      name: "Upload Product",
+      path: "/Uploadproduct",
+      name: "Uploadproduct",
       icon: <FaShoppingBag />,
     },
     {
