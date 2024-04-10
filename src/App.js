@@ -26,6 +26,8 @@ import Analytics from "./components/Dashboard/pages/Analytics.jsx";
 import Comment from "./components/Dashboard/pages/Comment.jsx";
 import Userlist from "./components/Dashboard/pages/Product.jsx";
 import ProductList from "./components/Dashboard/pages/ProductList.jsx";
+import UploadProduct from "./components/Dashboard/pages/UploadProduct.jsx";
+import CropsUpload from "./components/Dashboard/pages/CropsUpload.jsx";
 function App() {
   return (
     <>
@@ -54,11 +56,12 @@ function App() {
           <Route path="/Sidebar" element={<Sidebar />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/User" element={<User />} />
+          <Route path="/UploadProduct" element={<UploadProduct />} />
           <Route path="/comment" element={<Comment />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/Userlist" element={<Userlist />} />
           <Route path="/productList" element={<ProductList />} />
+          <Route path="/CropsUpload" element={<CropsUpload />} />
         </Routes>
         <Footer />
       </Router>

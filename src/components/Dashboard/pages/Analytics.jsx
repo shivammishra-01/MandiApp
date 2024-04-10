@@ -4,7 +4,7 @@ import "./pages.css";
 
 const Analytics = () => {
   return (
-    <div className=".dash-main">
+    <div className="dash-main">
       <Sidebar />
       <h1>Analytics page</h1>
     </div>

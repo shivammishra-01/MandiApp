@@ -7,7 +7,7 @@ const Comment = () => {
   return (
     <div className="dash-main ">
       <Sidebar />
-      <h1>dashboard page</h1>
+      <h1>Comment page</h1>
     </div>
   );
 };
