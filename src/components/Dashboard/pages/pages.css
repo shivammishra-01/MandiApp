@@ -3,3 +3,49 @@
   flex-direction: row;
   justify-content: start;
 }
+/* Float four columns side by side */
+.columnnn {
+  
+  float: left;
+  width: 70%;
+  padding: 0 30px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.rowses {
+  margin: 100px 500px;
+}
+
+/* Clear floats after the columns */
+.rowses:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .columnnn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.cardses {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  /* margin: 20px; */
+}
+.circular-image img {
+  border-radius: 90%;
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+}
+
+.ffff{
+  display: flex;
+}

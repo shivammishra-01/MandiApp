@@ -62,7 +62,7 @@ const Plantationcrops = () => {
         <h2 className="view_all">
           <i class="fas fa-eye"></i>
           <Link
-            to="/Crops/Foodcrops/Product"
+            to="/Crops/PlantationsCrops/Product"
             style={{ textDecoration: "none", color: "#4caf50" }}
           >
             view All

@@ -39,15 +39,11 @@ const Sidebar = ({ children }) => {
       icon: <FaCommentAlt />,
     },
     {
-      path: "/product",
-      name: "Product",
+      path: "/UploadProduct",
+      name: "UploadProduct",
       icon: <FaShoppingBag />,
     },
-    {
-      path: "/Uploadproduct",
-      name: "Uploadproduct",
-      icon: <FaShoppingBag />,
-    },
+
     {
       path: "/productList",
       name: "Product List",
@@ -62,44 +58,6 @@ const Sidebar = ({ children }) => {
             <img src={profile} alt="Avatar" class="avatar" />
             {FarmerData().name}
           </h1>
-          {/* <header>
-      <div className="logosec">
-        <div className="logo">GeeksForGeeks</div>
-        <img
-          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
-          className="icn menuicn"
-          id="menuicn"
-          alt="menu-icon"
-        />
-      </div>
-
-      <div className="searchbar">
-        <input type="text" placeholder="Search" />
-        <div className="searchbtn">
-          <img
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180758/Untitled-design-(28).png"
-            className="icn srchicn"
-            alt="search-icon"
-          />
-        </div>
-      </div>
-
-      <div className="message">
-        <div className="circle"></div>
-        <img
-          src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png"
-          className="icn"
-          alt=""
-        />
-        <div className="dp">
-          <img
-            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-            className="dpicn"
-            alt="dp"
-          />
-        </div>
-      </div>
-    </header> */}
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle} />
           </div>
