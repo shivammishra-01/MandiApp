@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../img/Logo.png";
 import { FarmerData, isLoggedIn } from "../Farmer/Auth";
 
 export default function Navbar() {
+  let navigate = useNavigate();
   useEffect(() => {
     isLoggedIn();
-  });
+  }, []);
+  const logout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('farmer');
+    navigate('/');
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -131,7 +137,7 @@ export default function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    {FarmerData().result}
+                    {FarmerData().name}
                   </a>
                   <ul className="dropdown-menu">
                     <li>
@@ -140,7 +146,7 @@ export default function Navbar() {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="#">
+                      <Link className="dropdown-item" onClick={logout} >
                         Logout
                       </Link>
                     </li>

@@ -1,6 +1,9 @@
 export const isLoggedIn = () => {
-  return true;
+  let data = localStorage.getItem('farmer');
+  if (data) return true; return false;
 };
 export const FarmerData = () => {
-  return { result: "Abhishek" };
+  let data= JSON.parse(localStorage.getItem('farmer'));
+  console.log(data);
+  return data;
 };

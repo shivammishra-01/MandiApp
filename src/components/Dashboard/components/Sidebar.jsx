@@ -12,6 +12,7 @@ import "../App.css";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import profile from "./All.gif";
+import { FarmerData } from "../../Farmer/Auth";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +60,7 @@ const Sidebar = ({ children }) => {
         <div className="top_section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
             <img src={profile} alt="Avatar" class="avatar" />
-            Abhishek
+            {FarmerData().name}
           </h1>
           {/* <header>
       <div className="logosec">

@@ -46,10 +46,20 @@ export default function Login() {
                 const res = await axios.post('http://localhost:8080/api/login', login, { headers: { 'Content-Type': 'application/json' } })
                 console.log(res)
                 if(res.status==200){
-                    localStorage.setItem("farmer",JSON.stringify(res.data))
+                    localStorage.setItem("farmer",JSON.stringify(res.data));
+                    navigate('/');
                 }
                 else{
-                    alert("lll")
+                    toast.error('Please Enter Valid Id and Password..!', {
+                        position: "top-center",
+                        autoClose: 1000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
                 }
             } catch (error) {
                 console.log(error);
