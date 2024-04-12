@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import "./pages.css";
 import yourImage from "./farmer.png";
+import Animal from "./anime_cow.gif";
 const UploadProduct = () => {
   return (
     <div className="dash-main">
@@ -26,8 +27,8 @@ const UploadProduct = () => {
             <div className="cardses">
               {/* <h3>Card 2</h3> */}
               <div className="circular-image">
-                <a href="/productList" className="circular-image-link">
-                  <img src={yourImage} alt="Description of your image" />
+                <a href="/AnimalsUpload" className="circular-image-link">
+                  <img src={Animal} alt="Description of your image" />
                 </a>
                 Animals
               </div>
@@ -37,7 +38,7 @@ const UploadProduct = () => {
             <div className="cardses">
               {/* <h3>Card 3</h3> */}
               <div className="circular-image">
-                <a href="/productList" className="circular-image-link">
+                <a href="/FertilizerUpload" className="circular-image-link">
                   <img src={yourImage} alt="Description of your image" />
                 </a>
                 Fertilizer

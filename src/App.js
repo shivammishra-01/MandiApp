@@ -17,6 +17,9 @@ import Footer from "./components/Layout/Footer.js";
 import Cowproduct from "./components/Animals/Cowsproduct/Cowproduct.jsx";
 import Product from "./components/Animals/Buffaloproduct/Product.jsx";
 import Goatproduct from "./components/Animals/Goatproduct/Goatproduct.jsx";
+import Foodcrops from "./components/Crops/Foodcrops/Foodcrops.jsx";
+import CashProduct from "./components/Crops/Cashcrops/CashProduct.jsx";
+import PlantationsProduct from "./components/Crops/Plantationcrops/PlantationsProduct.jsx";
 // import Profile from "./components/Dashboard/Profile.jsx";
 // Dashboard
 import Sidebar from "./components/Dashboard/components/Sidebar.jsx";
@@ -28,6 +31,8 @@ import Userlist from "./components/Dashboard/pages/Product.jsx";
 import ProductList from "./components/Dashboard/pages/ProductList.jsx";
 import UploadProduct from "./components/Dashboard/pages/UploadProduct.jsx";
 import CropsUpload from "./components/Dashboard/pages/CropsUpload.jsx";
+import AnimalsUpload from "./components/Dashboard/pages/AnimalsUpload.jsx";
+import FertilizerUpload from "./components/Dashboard/pages/FertilizerUpload.jsx";
 function App() {
   return (
     <>
@@ -51,6 +56,16 @@ function App() {
           <Route path="Animals/Cows/Product" element={<Cowproduct />}></Route>
           <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
           <Route path="Animals/Goat/Product" element={<Goatproduct />}></Route>
+          {/* crops product */}
+          <Route
+            path="Crops/CashCrops/Product"
+            element={<CashProduct />}
+          ></Route>
+          <Route
+            path="Crops/PlantationsCrops/Product"
+            element={<PlantationsProduct />}
+          ></Route>
+          <Route path="Crops/Foodcrops/Product" element={<Foodcrops />}></Route>
           {/* <Route path="/Profile" element={<Profile />}></Route> */}
           {/* Dashboard */}
           <Route path="/Sidebar" element={<Sidebar />} />
@@ -62,6 +77,8 @@ function App() {
           <Route path="/Userlist" element={<Userlist />} />
           <Route path="/productList" element={<ProductList />} />
           <Route path="/CropsUpload" element={<CropsUpload />} />
+          <Route path="/FertilizerUpload" element={<FertilizerUpload />} />
+          <Route path="/AnimalsUpload" element={<AnimalsUpload />} />
         </Routes>
         <Footer />
       </Router>

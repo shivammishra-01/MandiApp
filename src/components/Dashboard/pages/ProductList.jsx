@@ -9,7 +9,7 @@ const ProductList = () => {
       <div className="dash-main">
         <Sidebar />
 
-        <h1>userlist</h1>
+        <h1>Productlist</h1>
       </div>
     </>
   );

@@ -9,7 +9,8 @@ const UserList = () => {
     <div className="dash-main">
       <Sidebar />
       {/* <UserListPage /> */}
-      <h1>User list</h1>
+      <h1>User list abbu</h1>
+      
     </div>
   );
 };

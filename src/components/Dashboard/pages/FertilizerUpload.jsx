@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import "./pages.css";
 
 import img from "./farmer.png";
-const CropsUpload = () => {
+const FertilizerUpload = () => {
   return (
     <div className="dash-main">
       <Sidebar />
@@ -16,7 +16,7 @@ const CropsUpload = () => {
             backgroundColor: "green",
           }}
         >
-          <h1 className="text-center">Crops Upload </h1>
+          <h1 className="text-center">Fertilizer Upload</h1>
           <div className="row">
             <div className="col-lg-5">
               <img alt={img} className="img-fluid" />
@@ -206,4 +206,4 @@ const CropsUpload = () => {
   );
 };
 
-export default CropsUpload;
+export default FertilizerUpload;
