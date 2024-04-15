@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import "./pages.css";
+import { Link } from 'react-router-dom'
 import yourImage from "./farmer.png";
 import Animal from "./anime_cow.gif";
 const UploadProduct = () => {
@@ -16,9 +17,9 @@ const UploadProduct = () => {
             <div className="cardses">
               {/* <h3>Card 1</h3> */}
               <div className="circular-image">
-                <a href="/CropsUpload" className="circular-image-link">
+                <Link to="/farmer/CropsUpload" className="circular-image-link">
                   <img src={yourImage} alt="Description of your image" />
-                </a>
+                </Link>
                 Crops
               </div>
             </div>
@@ -27,9 +28,9 @@ const UploadProduct = () => {
             <div className="cardses">
               {/* <h3>Card 2</h3> */}
               <div className="circular-image">
-                <a href="/AnimalsUpload" className="circular-image-link">
+                <Link to="/farmer/AnimalsUpload" className="circular-image-link">
                   <img src={Animal} alt="Description of your image" />
-                </a>
+                </Link>
                 Animals
               </div>
             </div>
@@ -38,9 +39,9 @@ const UploadProduct = () => {
             <div className="cardses">
               {/* <h3>Card 3</h3> */}
               <div className="circular-image">
-                <a href="/FertilizerUpload" className="circular-image-link">
+                <Link to="/farmer/FertilizerUpload" className="circular-image-link">
                   <img src={yourImage} alt="Description of your image" />
-                </a>
+                </Link>
                 Fertilizer
               </div>
             </div>

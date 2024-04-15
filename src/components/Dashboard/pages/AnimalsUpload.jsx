@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import "./pages.css";
 
 import img from "./farmer.png";
+import { FarmerData } from "../../Farmer/Auth";
 const AnimalsUpload = () => {
+  const [name, setName] = useState('');
+  const [qnt, setQnt] = useState('');
+  const [price, setPrice] = useState('');
+  const [breed, setBreed] = useState('');
+  const AnimalSubmit = (e) => {
+    e.preventDefault();
+    const Animal = { name, qnt, price, breed, state: FarmerData().state, farmerid: FarmerData().farmerid }
+    console.log(Animal)
+  }
   return (
     <div className="dash-main">
       <Sidebar />
@@ -23,15 +33,15 @@ const AnimalsUpload = () => {
             </div>
             <div className="col-lg-7">
               <div className="mx-2 my-2">
-                <form>
+                <form onSubmit={AnimalSubmit}>
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="mb-3">
                         <div className={`d-flex `}>
                           {/* <i className="fa-solid fa-user mt-2 ps-2"></i> */}
-                          <i class="fa-solid fa-bag-shopping  mt-2 ps-2 "></i>
+                          <i className="fa-solid fa-bag-shopping  mt-2 ps-2 "></i>
                           &nbsp;
-                          <input
+                          <input value={name} onChange={(e) => setName(e.target.value)}
                             type="text"
                             className={`form-control `}
                             id="name"
@@ -41,9 +51,9 @@ const AnimalsUpload = () => {
                           />
                         </div>
                       </div>
-                      <div className="mb-3">
+                      {/* <div className="mb-3">
                         <div className={`d-flex `}>
-                          <i class="fa-solid fa-thumbs-up mt-2 ps-2"></i>
+                          <i className="fa-solid fa-thumbs-up mt-2 ps-2"></i>
                           &nbsp;
                           <input
                             type="email"
@@ -51,20 +61,20 @@ const AnimalsUpload = () => {
                             id="email"
                             name="email"
                             autoComplete="off"
-                            placeholder="Product Quality"
+                            placeholder="Product Quatity"
                           />
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="mb-3">
                         <div className={`d-flex `}>
-                          <i class="fa-solid fa-indian-rupee-sign mt-2 ps-3"></i>
+                          <i className="fa-solid fa-indian-rupee-sign mt-2 ps-3"></i>
                           &nbsp;
-                          <input
+                          <input value={qnt} onChange={(e) => setQnt(e.target.value)}
                             type="number"
                             className={`form-control `}
-                            id="number"
-                            name="number"
+                            id="qnt"
+                            name="qnt"
                             autoComplete="off"
                             placeholder="Product Price"
                           />
@@ -74,7 +84,7 @@ const AnimalsUpload = () => {
                         <div className={`d-flex `}>
                           <i className="fa-solid fa-address-card mt-2 ps-2"></i>
                           &nbsp;
-                          <input
+                          <input value={price} onChange={(e) => setPrice(e.target.value)}
                             type="number"
                             className={`form-control `}
                             id="adhar"
@@ -84,7 +94,7 @@ const AnimalsUpload = () => {
                           />
                         </div>
                       </div>
-                      <div className="mb-3">
+                      {/* <div className="mb-3">
                         <div className={`d-flex `}>
                           <i className="fa-solid fa-lock mt-2 ps-3"></i>&nbsp;
                           <div className="password-toggle">
@@ -100,53 +110,33 @@ const AnimalsUpload = () => {
                             <i className={`fa-regular `}></i>
                           </div>
                         </div>
-                      </div>
-                      {/* <div className="mb-3">
-                          <div className={`d-flex `}>
-                            <i className="fa-solid fa-lock mt-2 ps-2"></i>&nbsp;
-                            <div className="password-toggle">
-                              <input
-                              
-                                className={`form-control `}
-                                id="cpassword"
-                                placeholder="Confirm Password"
-                              />
-                              <i className={`fa-regular `}></i>
-                            </div>
-                          </div>
-                        </div> */}
+                      </div> */}
+
                     </div>
                     <div className="col-lg-6">
                       <div className="mb-3">
-                        <div className={`d-flex `}>&nbsp;</div>
-                        <div className="mt-3">
-                          <div className={`d-flex `}>
-                            &nbsp;
-                            <select
-                              className="form-select"
-                              id="district"
-                              aria-label="Default select example"
-                              name="diss"
-                            >
-                              <option>Which types of products</option>{" "}
-                              {/* Your option */}
-                              <option value="district1">Crops</option>
-                              <option value="district2">Animals</option>
-                              <option value="district3">Fertilizers</option>
-                            </select>
-                          </div>
+                        <div className={`d-flex `}>
+                          &nbsp;
+                          <input
+                            type="text" value={name} onChange={(e) => setName(e.target.value)}
+                            name="mandiname"
+                            className={`form-control `}
+                            id="mandiname"
+                            autoComplete="off"
+                            placeholder="State"
+                          />
                         </div>
                       </div>
                       <div className="mb-3">
                         <div className={`d-flex `}>
                           &nbsp;
-                          <input
+                          <input value={breed} onChange={(e) => setBreed(e.target.value)}
                             type="text"
-                            name="mandiname"
+                            name="breed"
                             className={`form-control `}
-                            id="mandiname"
+                            id="breed"
                             autoComplete="off"
-                            placeholder="Mandi"
+                            placeholder="Breed"
                           />
                         </div>
                       </div>
@@ -159,18 +149,13 @@ const AnimalsUpload = () => {
                             className={`form-control `}
                             id="mandiname"
                             autoComplete="off"
-                            placeholder="Mandi"
+                            placeholder="Breed"
                           />
                         </div>
                       </div>
-                      {/* <div className="mb-3">
-                                            <div className="d-flex" >
-                                                <label htmlFor="image"><i className="fa-solid fa-image mt-2"></i> Upload Img</label>&nbsp;<input type="file" id='image' accept='image/jpeg, image/png, image/jpg' className={`form-control ${signupcss.formControl}`} name='image' style={{ display: "none" }} />
-                                                <img src={singup} alt="" className='img-fluid rounded-4' style={{ height: "30px", width: "30px" }} />
-                                            </div>
-                                        </div>  */}
 
-                      <div className="mt-3">
+
+                      {/* <div className="mt-3">
                         <input
                           className="form-check-input"
                           type="checkbox"
@@ -182,7 +167,7 @@ const AnimalsUpload = () => {
                           {" "}
                           Terms and Condtion.
                         </label>
-                      </div>
+                      </div> */}
                       <div className="mt-3 text-center">
                         <button className="btn btn-success" type="submit">
                           {" "}

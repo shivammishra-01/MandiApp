@@ -141,7 +141,7 @@ export default function Navbar() {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link className="dropdown-item" to="/Sidebar">
+                      <Link className="dropdown-item" to="farmer/Sidebar">
                         My Profile
                       </Link>
                     </li>

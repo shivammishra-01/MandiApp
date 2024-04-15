@@ -19,7 +19,7 @@ const Sidebar = ({ children }) => {
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
-      path: "/Dashboard",
+      path: "/farmer/Dashboard",
       name: "Dashboard",
       icon: <FaTh />,
     },
@@ -39,13 +39,13 @@ const Sidebar = ({ children }) => {
       icon: <FaCommentAlt />,
     },
     {
-      path: "/UploadProduct",
+      path: "/farmer/UploadProduct",
       name: "UploadProduct",
       icon: <FaShoppingBag />,
     },
 
     {
-      path: "/productList",
+      path: "/farmer/productList",
       name: "Product List",
       icon: <FaThList />,
     },

@@ -4,6 +4,5 @@ export const isLoggedIn = () => {
 };
 export const FarmerData = () => {
   let data= JSON.parse(localStorage.getItem('farmer'));
-  console.log(data);
   return data;
 };

@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/AnimalCard.css";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 import murrah from "../img/goat.jpeg";
 
 const Goatcard = () => {
+  const [Goats, setGoats] = useState([]);
+  const Goatsdata = async () => {
+    const res = await axios.get('http://localhost:8080/api/animaltopname/Goats');
+    console.log(res)
+    setGoats(res.data)
+  }
+  useEffect(() => {
+    Goatsdata();
+  }, [])
   const settings = {
     // dots: true,
     speed: 500,
@@ -70,174 +80,34 @@ const Goatcard = () => {
         </h2>
       </div>
       <Slider {...settings}>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
+      {Goats && Goats.map((element,index) => {
+          return (
+            <div className="custom-product-card" key={index}>
+              <img src={murrah} alt="Product" className="custom-product-image" />
+              <div className="custom-product-info">
+                <h6 className="custom-product-title">{element.name}</h6>
+                <p className="custom-product-description">
+                  <strong>Breed:</strong>{element.breed}
+                </p>
+                <p className="custom-product-description">
+                  <strong>Qua:</strong> 10L/Day
+                </p>
+                <p className="custom-product-description">
+                  <span className="nowrap">
+                    <strong>Price:</strong>₹ {element.price}
+                  </span>
+                </p>
+                <p className="custom-product-description">
+                  <span className="nowrap">
+                    <strong>Quntity:</strong> {element.qnt}
+                  </span>
+                </p>
 
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            <h6 className="custom-product-title">Product Name</h6>
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10L/Day
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 90,000
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
+                <button className="custom-add-to-cart-btn">Buy/Book Now</button>
+              </div>
+            </div>
+          )
+        })}
       </Slider>
     </div>
   );

@@ -10,7 +10,6 @@ import Animals from "./components/Animals/AnimalsHome/Animals.js";
 import Crops from "./components/Crops/Crophome/Crops.js";
 import Fertilizer from "./components/Fertilizer/Fertilizerhome/Fertilizer.js";
 import PrivateRoute from "./components/Farmer/PrivateRoute/PrivateRoute.js";
-import DashBoard from "./components/Farmer/DashBoard.js";
 import Service from "./components/service/Service.js";
 import About from "./components/About/About.js";
 import Footer from "./components/Layout/Footer.js";
@@ -38,47 +37,40 @@ function App() {
     <>
       <Router>
         <Navbar />
-
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Animals" element={<Animals />} />
+          <Route path="/Crops" element={<Crops />} />
+          <Route path="/Fertilizer" element={<Fertilizer />} />
+          <Route path="/allanimal" element={<Animals />} />
+          <Route path="/Service" element={<Service />} />
+          <Route path="/About" element={<About />} />
+          <Route path="Animals/Cows/Product" element={<Cowproduct />} />
+          <Route path="Animals/Buffalo/Product" element={<Product />} />
+          <Route path="Animals/Goat/Product" element={<Goatproduct />} />
+          <Route path="Crops/CashCrops/Product" element={<CashProduct />} />
+          <Route path="Crops/PlantationsCrops/Product" element={<PlantationsProduct />} />
+          <Route exact path="Crops/Foodcrops/Product" element={<Foodcrops />} />
+          <Route exact path="/" element={<Dashboard />} />
+          <Route exact path="/comment" element={<Comment />} />
+          <Route exact path="/analytics" element={<Analytics />} />
+          <Route exact path="/Userlist" element={<Userlist />} />
+
+
           <Route exact path="/farmer" element={<PrivateRoute />}>
-            <Route exact path={`dashboard`} element={<DashBoard />} />
+            <Route exact path={`dashboard`} element={<Dashboard />} />
+            <Route exact path={`Sidebar`} element={<Sidebar />} />
+            <Route exact path={`CropsUpload`} element={<CropsUpload />} />
+            <Route exact path={`FertilizerUpload`} element={<FertilizerUpload />} />
+            <Route exact path={`AnimalsUpload`} element={<AnimalsUpload />} />
+            <Route exact path={`UploadProduct`} element={<UploadProduct />} />
+            <Route exact path={`productList`} element={<ProductList />} />
           </Route>
-          <Route path="/Signup" element={<Signup />}></Route>
-          <Route path="/Animals" element={<Animals />}></Route>
-          <Route path="/Crops" element={<Crops />}></Route>
-          <Route path="/Fertilizer" element={<Fertilizer />}></Route>
-          <Route path="/allanimal" element={<Animals />}></Route>
-          <Route path="/Service" element={<Service />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="Animals/Cows/Product" element={<Cowproduct />}></Route>
-          <Route path="Animals/Buffalo/Product" element={<Product />}></Route>
-          <Route path="Animals/Goat/Product" element={<Goatproduct />}></Route>
-          {/* crops product */}
-          <Route
-            path="Crops/CashCrops/Product"
-            element={<CashProduct />}
-          ></Route>
-          <Route
-            path="Crops/PlantationsCrops/Product"
-            element={<PlantationsProduct />}
-          ></Route>
-          <Route path="Crops/Foodcrops/Product" element={<Foodcrops />}></Route>
-          {/* <Route path="/Profile" element={<Profile />}></Route> */}
-          {/* Dashboard */}
-          <Route path="/Sidebar" element={<Sidebar />} />
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/UploadProduct" element={<UploadProduct />} />
-          <Route path="/comment" element={<Comment />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/Userlist" element={<Userlist />} />
-          <Route path="/productList" element={<ProductList />} />
-          <Route path="/CropsUpload" element={<CropsUpload />} />
-          <Route path="/FertilizerUpload" element={<FertilizerUpload />} />
-          <Route path="/AnimalsUpload" element={<AnimalsUpload />} />
+
+
         </Routes>
         <Footer />
       </Router>
