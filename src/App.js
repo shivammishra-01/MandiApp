@@ -52,25 +52,29 @@ function App() {
           <Route path="Animals/Buffalo/Product" element={<Product />} />
           <Route path="Animals/Goat/Product" element={<Goatproduct />} />
           <Route path="Crops/CashCrops/Product" element={<CashProduct />} />
-          <Route path="Crops/PlantationsCrops/Product" element={<PlantationsProduct />} />
+          <Route
+            path="Crops/PlantationsCrops/Product"
+            element={<PlantationsProduct />}
+          />
           <Route exact path="Crops/Foodcrops/Product" element={<Foodcrops />} />
           <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/comment" element={<Comment />} />
           <Route exact path="/analytics" element={<Analytics />} />
           <Route exact path="/Userlist" element={<Userlist />} />
 
-
           <Route exact path="/farmer" element={<PrivateRoute />}>
             <Route exact path={`dashboard`} element={<Dashboard />} />
             <Route exact path={`Sidebar`} element={<Sidebar />} />
             <Route exact path={`CropsUpload`} element={<CropsUpload />} />
-            <Route exact path={`FertilizerUpload`} element={<FertilizerUpload />} />
+            <Route
+              exact
+              path={`FertilizerUpload`}
+              element={<FertilizerUpload />}
+            />
             <Route exact path={`AnimalsUpload`} element={<AnimalsUpload />} />
             <Route exact path={`UploadProduct`} element={<UploadProduct />} />
             <Route exact path={`productList`} element={<ProductList />} />
           </Route>
-
-
         </Routes>
         <Footer />
       </Router>
