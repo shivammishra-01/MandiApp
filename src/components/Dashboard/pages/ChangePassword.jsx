@@ -1,38 +1,40 @@
 import React from "react";
-import AdminSidebar from "../components/AdminSidebar";
-import "./Pages.css";
-const UpdateProfile = () => {
+import Sidebar from "../components/Sidebar";
+import "./pages.css";
+
+const ChangePassword = () => {
   return (
     <div className="dash-main">
-      <AdminSidebar />
-      {/* <UserListPage /> */}
+      <Sidebar />
       <div className="container d-flex justify-content-center mt-5 pt-4">
         <div
           className={`card shadow`}
-          style={{ width: "22rem", height: "20rem" }}
+          style={{ width: "22rem", height: "18rem" }}
         >
-          <h3 className="text-center text-dark fw-bold mt-3">Update Profile</h3>
-          <div className="text-center mt-3" style={{ height: "3rem" }}></div>
+          <h3 className="text-center text-dark fw-bold mt-4">
+            Update Password
+          </h3>
+
           <form>
             <div className="mx-2 mb-2">
               <div className="mb-3">
                 <div className="d-flex bottom-line">
-                  <i className="fa-solid fa-user mt-2 ps-2"></i>&nbsp;
+                  <i className="fa-solid fa-lock mt-2 ps-2"></i>&nbsp;
                   <input
                     type="text"
                     className="form-control"
                     id="Adminid"
                     autoComplete="off"
-                    placeholder="Update Name"
+                    placeholder="Old Password"
                   />
                 </div>
               </div>
 
               <div className="mb-3">
                 <div className="d-flex bottom-line">
-                  <i class="fa-regular fa-image mt-2 ps-2 "></i>&nbsp;
+                  <i className="fa-solid fa-lock mt-2 ps-2"></i>&nbsp;
                   <input
-                    type="file"
+                    type="text"
                     className="form-control"
                     id="Adminid"
                     autoComplete="off"
@@ -40,10 +42,22 @@ const UpdateProfile = () => {
                   />
                 </div>
               </div>
+              <div className="mb-3">
+                <div className="d-flex bottom-line">
+                  <i className="fa-solid fa-lock mt-2 ps-2"></i>&nbsp;
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="Adminid"
+                    autoComplete="off"
+                    placeholder="conform Password"
+                  />
+                </div>
+              </div>
 
               <div className="text-center">
                 <button className="btn btn-danger" type="submit">
-                  Submit
+                  Update
                 </button>
               </div>
             </div>
@@ -54,4 +68,4 @@ const UpdateProfile = () => {
   );
 };
 
-export default UpdateProfile;
+export default ChangePassword;

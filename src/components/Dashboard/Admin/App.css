@@ -50,3 +50,61 @@ main {
 .link_text {
   font-size: 20px;
 }
+
+/* Update profile */
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Mooli&family=Playpen+Sans&family=Rubik:wght@300&family=Ubuntu:wght@300;400&display=swap");
+* {
+  font-family: "Mooli", sans-serif;
+}
+
+.registrationForm {
+  background: #4caf50;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* This is for registration-form only  */
+.bottomLine i {
+  color: #ffd700;
+}
+.passwordTtoggle {
+  position: relative;
+  width: 100%;
+}
+
+.passwordToggle i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+}
+.passwordToggle i:hover {
+  color: #ffd700;
+}
+.formControl,
+.formSelect {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.bottomLine {
+  border-bottom: 2px solid #ffd700;
+  background: white;
+}
+.formControl:focus,
+.formSelect:focus {
+  outline: none;
+  box-shadow: none;
+}
+.Home {
+  background: #ffd700;
+  clip-path: polygon(50% 0%, 100% 0, 100% 96%, 66% 100%, 28% 96%, 0 100%, 0 0);
+}

@@ -1,10 +1,10 @@
 import React from "react";
-import AdminSidebar from "../components/AdminSidebar";
-import "./Pages.css";
-const UpdateProfile = () => {
+import Sidebar from "../components/Sidebar";
+import "./pages.css";
+const UpdateProfiles = () => {
   return (
     <div className="dash-main">
-      <AdminSidebar />
+      <Sidebar />
       {/* <UserListPage /> */}
       <div className="container d-flex justify-content-center mt-5 pt-4">
         <div
@@ -24,6 +24,18 @@ const UpdateProfile = () => {
                     id="Adminid"
                     autoComplete="off"
                     placeholder="Update Name"
+                  />
+                </div>
+              </div>
+              <div className="mb-3">
+                <div className="d-flex bottom-line">
+                  <i class="fa-solid fa-mobile mt-2 ps-2"></i>&nbsp;
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="Adminid"
+                    autoComplete="off"
+                    placeholder="Mobile Number"
                   />
                 </div>
               </div>
@@ -54,4 +66,4 @@ const UpdateProfile = () => {
   );
 };
 
-export default UpdateProfile;
+export default UpdateProfiles;

@@ -29,6 +29,16 @@ const Sidebar = ({ children }) => {
       icon: <FaUserAlt />,
     },
     {
+      path: "/farmer/UpdateProfiles",
+      name: "Update Profiles",
+      icon: <FaUserAlt />,
+    },
+    {
+      path: "/farmer/ChangePassword",
+      name: "Change Password",
+      icon: <FaUserAlt />,
+    },
+    {
       path: "/analytics",
       name: "Analytics",
       icon: <FaRegChartBar />,

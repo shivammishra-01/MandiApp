@@ -33,11 +33,14 @@ import UploadProduct from "./components/Dashboard/pages/UploadProduct.jsx";
 import CropsUpload from "./components/Dashboard/pages/CropsUpload.jsx";
 import AnimalsUpload from "./components/Dashboard/pages/AnimalsUpload.jsx";
 import FertilizerUpload from "./components/Dashboard/pages/FertilizerUpload.jsx";
+import ChangePassword from "./components/Dashboard/pages/ChangePassword.jsx";
+import UpdateProfiles from "./components/Dashboard/pages/UpdateProfiles.jsx";
 // AdminDashboard
 import AdminSidebar from "./components/Dashboard/Admin/components/AdminSidebar.jsx";
 import FarmerList from "./components/Dashboard/Admin/Pages/FarmerList.jsx";
 import AdminDashboard from "./components/Dashboard/Admin/Pages/AdminDashboard.jsx";
 import UpdateProfile from "./components/Dashboard/Admin/Pages/UpdateProfile.jsx";
+import UpdatePassword from "./components/Dashboard/Admin/Pages/UpdatePassword.jsx";
 import Farmerproduct from "./components/Dashboard/Admin/Pages/Farmerproduct.jsx";
 import AdminRoute from "./components/Dashboard/Admin/AdminRoute.js";
 function App() {
@@ -83,6 +86,8 @@ function App() {
             <Route exact path={`AnimalsUpload`} element={<AnimalsUpload />} />
             <Route exact path={`UploadProduct`} element={<UploadProduct />} />
             <Route exact path={`productList`} element={<ProductList />} />
+            <Route exact path={`ChangePassword`} element={<ChangePassword />} />
+            <Route exact path={`UpdateProfiles`} element={<UpdateProfiles />} />
           </Route>
 
           <Route exact path="/admin" element={<AdminRoute />}>
@@ -90,6 +95,7 @@ function App() {
             <Route exact path={`FarmerList`} element={<FarmerList />} />
             <Route exact path={`AdminDashboard`} element={<AdminDashboard />} />
             <Route exact path={`UpdateProfile`} element={<UpdateProfile />} />
+            <Route exact path={`UpdatePassword`} element={<UpdatePassword />} />
             <Route exact path={`Farmerproduct`} element={<Farmerproduct />} />
           </Route>
         </Routes>

@@ -29,6 +29,11 @@ const AdminSidebar = ({ children }) => {
       icon: <FaUserAlt />,
     },
     {
+      path: "/admin/UpdatePassword",
+      name: "Update Password",
+      icon: <FaUserAlt />,
+    },
+    {
       path: "/admin/analytics",
       name: "Analytics",
       icon: <FaRegChartBar />,

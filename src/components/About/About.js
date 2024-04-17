@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-
+import "./About.css";
+import sk from "./img/skmishra.jpg";
+import shivam from "./img/shivam.jpg";
+import ujjwal from "./img/ujjwal.jpg";
 const About = () => {
   return (
     <>
       <div className="font" style={{ backgroundColor: "#C7F6C7" }}>
-        <div
-          className="container"
-          style={{ marginRight: "100px", marginLeft: "100px" }}
-        >
+        <div className="container  ">
           <div className="about" id="about">
             <h3
               style={{
@@ -108,6 +108,358 @@ const About = () => {
                   </p>
                 </li>
               </ul>
+            </div>
+            <h3
+              style={{
+                textAlign: "center",
+                backgroundColor: "#00a651",
+                padding: "12px",
+                marginTop: "20px",
+              }}
+            >
+              <b>--------Project Developers--------</b>
+            </h3>
+
+            <div class="container">
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img src={sk} alt="" className="profile-pic" />
+                  </div>
+                  <div className="data">
+                    <h2>Shivam Kumar</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/s-k-mishra-615109262/"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/shivammishra-01"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img src={sk} alt="" className="profile-pic" />
+                  </div>
+                  <div className="data">
+                    <h2>Manish Patel</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/vicky-cse03"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/vicky0004"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img
+                      src=".\assets\images\vicky.png"
+                      alt=""
+                      className="profile-pic"
+                    />
+                  </div>
+                  <div className="data">
+                    <h2>Shubham Kumar</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/vicky-cse03"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/vicky0004"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img
+                      src=".\assets\images\vicky.png"
+                      alt=""
+                      className="profile-pic"
+                    />
+                  </div>
+                  <div className="data">
+                    <h2>Aniket Kumar</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/aniket-kumar-552788249/"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/Aniket3741"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img
+                      src=".\assets\images\vicky.png"
+                      alt=""
+                      className="profile-pic"
+                    />
+                  </div>
+                  <div className="data">
+                    <h2>Guddu Kumar</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/vicky-cse03"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/vicky0004"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img
+                      src=".\assets\images\vicky.png"
+                      alt=""
+                      className="profile-pic"
+                    />
+                  </div>
+                  <div className="data">
+                    <h2>Abhishek Tiwari</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/vicky-cse03"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/vicky0004"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img src={shivam} alt="" className="profile-pic" />
+                  </div>
+                  <div className="data">
+                    <h2>Shivam Tiwari</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/shivam-tiwari-a57b93223/"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/Shivam1035"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img
+                      src=".\assets\images\vicky.png"
+                      alt=""
+                      className="profile-pic"
+                    />
+                  </div>
+                  <div className="data">
+                    <h2>Niraj Upadhyay</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/vicky-cse03"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/vicky0004"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+              <div class="profile-card">
+                <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+                  <div className="image">
+                    <img src={ujjwal} alt="" className="profile-pic" />
+                  </div>
+                  <div className="data">
+                    <h2>Ujjwal Tiwari</h2>
+                    <span>B-Tech in CSE</span>
+                    <span>Full Stack Web Developer</span>
+                  </div>
+                  <div className="buttons">
+                    <a
+                      href="https://www.linkedin.com/in/ujjwal-tiwari-7a431a240/3"
+                      className="btn"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://github.com/Ujjwal-shandilya"
+                      className="btn"
+                      target="_blank"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+
+                  {/* <!-- Repeat this div for each additional card --> */}
+                </div>
+              </div>
+            </div>
+            <h3
+              style={{
+                textAlign: "center",
+                backgroundColor: "#00a651",
+                padding: "12px",
+                marginTop: "20px",
+              }}
+            >
+              <b>--------Project Mentor--------</b>
+            </h3>
+            <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
+              <div className="profile-card">
+                <div className="image">
+                  <img
+                    src=".\assets/images/dean.jpg"
+                    alt=""
+                    className="profile-pic"
+                  />
+                </div>
+                <div className="data">
+                  <h3>Devendra Maharana </h3>
+                  <span>HOD of CSE, SoET</span>
+                  <span className="text-center">CUTM , Paralakhemundi</span>
+                </div>
+                <div className="buttons">
+                  <a
+                    href="mailto:ashish.dash@cutm.ac.in"
+                    className="btn"
+                    target="_blank"
+                  >
+                    Mail
+                  </a>
+                  <a
+                    href="https://wa.me/+919437268679"
+                    className="btn"
+                    target="_blank"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="https://wa.me/+919437268679"
+                    className="btn"
+                    target="_blank"
+                  >
+                    phone
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
