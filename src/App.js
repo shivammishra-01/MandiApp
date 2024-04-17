@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Layout/Navbar.js";
 import Login from "./components/Home/Login.js";
+import AdminLogin from "./components/Home/AdminLogin.js";
 import Home from "./components/Layout/Home.js";
 import Signup from "./components/Home/Signup.js";
 import Contact from "./components/mandi/Contact.js";
@@ -32,6 +33,13 @@ import UploadProduct from "./components/Dashboard/pages/UploadProduct.jsx";
 import CropsUpload from "./components/Dashboard/pages/CropsUpload.jsx";
 import AnimalsUpload from "./components/Dashboard/pages/AnimalsUpload.jsx";
 import FertilizerUpload from "./components/Dashboard/pages/FertilizerUpload.jsx";
+// AdminDashboard
+import AdminSidebar from "./components/Dashboard/Admin/components/AdminSidebar.jsx";
+import FarmerList from "./components/Dashboard/Admin/Pages/FarmerList.jsx";
+import AdminDashboard from "./components/Dashboard/Admin/Pages/AdminDashboard.jsx";
+import UpdateProfile from "./components/Dashboard/Admin/Pages/UpdateProfile.jsx";
+import Farmerproduct from "./components/Dashboard/Admin/Pages/Farmerproduct.jsx";
+import AdminRoute from "./components/Dashboard/Admin/AdminRoute.js";
 function App() {
   return (
     <>
@@ -41,6 +49,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/AdminLogin" element={<AdminLogin />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Animals" element={<Animals />} />
           <Route path="/Crops" element={<Crops />} />
@@ -74,6 +83,14 @@ function App() {
             <Route exact path={`AnimalsUpload`} element={<AnimalsUpload />} />
             <Route exact path={`UploadProduct`} element={<UploadProduct />} />
             <Route exact path={`productList`} element={<ProductList />} />
+          </Route>
+
+          <Route exact path="/admin" element={<AdminRoute />}>
+            <Route exact path={`AdminSidebar`} element={<AdminSidebar />} />
+            <Route exact path={`FarmerList`} element={<FarmerList />} />
+            <Route exact path={`AdminDashboard`} element={<AdminDashboard />} />
+            <Route exact path={`UpdateProfile`} element={<UpdateProfile />} />
+            <Route exact path={`Farmerproduct`} element={<Farmerproduct />} />
           </Route>
         </Routes>
         <Footer />

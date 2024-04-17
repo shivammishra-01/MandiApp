@@ -2,17 +2,20 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../img/Logo.png";
 import { FarmerData, isLoggedIn } from "../Farmer/Auth";
+import { AdminrData, isAdminLoggedIn } from "../Dashboard/Admin/AdminAuth";
 
 export default function Navbar() {
   let navigate = useNavigate();
   useEffect(() => {
     isLoggedIn();
+    isAdminLoggedIn();
   }, []);
   const logout = (e) => {
     e.preventDefault();
-    localStorage.removeItem('farmer');
-    navigate('/');
-  }
+    if (isLoggedIn()) localStorage.removeItem("farmer");
+    else if (isAdminLoggedIn()) localStorage.removeItem("admin");
+    navigate("/");
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -104,7 +107,7 @@ export default function Navbar() {
                   {/* Add more dropdown items as needed */}
                 </ul>
               </li>
-              {isLoggedIn() ? (
+              {isLoggedIn() || isAdminLoggedIn() ? (
                 ""
               ) : (
                 <>
@@ -128,7 +131,7 @@ export default function Navbar() {
                   </li>
                 </>
               )}
-              {isLoggedIn() ? (
+              {isLoggedIn() || isAdminLoggedIn() ? (
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -137,16 +140,26 @@ export default function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    {FarmerData().name}
+                    {isLoggedIn() && FarmerData().name}
+                    {isAdminLoggedIn() && AdminrData().name}
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link className="dropdown-item" to="farmer/Sidebar">
+                      <Link
+                        className="dropdown-item"
+                        to={
+                          isLoggedIn()
+                            ? "farmer/Sidebar"
+                            : isAdminLoggedIn()
+                            ? "admin/AdminSidebar"
+                            : ""
+                        }
+                      >
                         My Profile
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" onClick={logout} >
+                      <Link className="dropdown-item" onClick={logout}>
                         Logout
                       </Link>
                     </li>
