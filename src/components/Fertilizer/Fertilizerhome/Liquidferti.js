@@ -62,7 +62,7 @@ const Liquidferti = () => {
         <h2 className="view_all">
           <i class="fas fa-eye"></i>
           <Link
-            to="/Crops/Foodcrops/Product"
+            to="OrganicFertilizers/Product"
             style={{ textDecoration: "none", color: "#4caf50" }}
           >
             view All

@@ -1,10 +1,27 @@
 // App.jsx
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Buffaloproduct/Animalss.css";
-import Buffalo from "../img/cows.jpg";
+import { listAnimal } from "../../services/animalServices";
+// import Buffalo from "../img/Crops.jpeg";
 
 function Cowproduct() {
+  // start
+  const [animal, setAnimal] = useState([]);
+
+  useEffect(() => {
+    listAnimal()
+      .then((response) => {
+        console.log(response.data);
+        setAnimal(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  // ends
+
   const [showLeft, setShowLeft] = useState(false);
 
   function toggleFilters() {
@@ -179,267 +196,47 @@ function Cowproduct() {
           </div>
           <div className="right">
             {" "}
-            <div
-              className="product-card"
-              data-category="clothing"
-              data-brand="Buffalo"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
-            <div
-              className="product-card"
-              data-category="electronics"
-              data-brand="apple"
-            >
-              <img
-                src={Buffalo}
-                alt="Product"
-                className="custom-product-image"
-              />
-              <div className="custom-product-info">
-                <h4 className="custom-product-title">Product Name</h4>
-                <p className="custom-product-description">
-                  <strong>Place:</strong>Name
-                </p>
-                <p className="custom-product-description">
-                  <strong>Quality:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <strong>Price:</strong>₹ 90,000
-                </p>
-                <p className="custom-product-description">
-                  <strong>Age:</strong> 5year(s)
-                </p>
-                <button className="custom-add-to-cart-btn">
-                  Buy/Books Now
-                </button>
-              </div>
-            </div>
+          
+            {/* cards */}
+            {/* <div className="crop-container"> */}
+              {animal.map((animals) => (
+                <div
+                  key={animals.id}
+                  className="product-card"
+                  data-category="clothing"
+                  data-brand={animal.brand}
+                >
+                  <img
+                    src={`http://localhost:8080/animal/${animals.image}`}
+                    alt="Product"
+                    className="custom-product-image"
+                  />
+                  <div className="custom-product-info">
+                    <h4 className="custom-product-title">{animals.name}</h4>
+                    <p className="custom-product-description">
+                      <strong>Quantity:</strong> {animals.qnt} kg
+                    </p>
+                    <p className="custom-product-description">
+                      <strong>Price:</strong> Rs {animals.price}
+                    </p>
+
+                    <p className="custom-product-description">
+                      <strong>Breed:</strong> {animals.breed}
+                    </p>
+
+                    <p className="custom-product-description">
+                      <strong>Age:</strong> {animals.age} years
+                    </p>
+                    <p className="custom-product-description">
+                      <strong>Milk:</strong> {animals.milk} Kg
+                    </p>
+                    <button className="custom-add-to-cart-btn">
+                      Buy/Book Now
+                    </button>
+                  </div>
+                </div>
+              ))}
+            {/* </div> */}
           </div>
         </div>
         <div style={{ textAlign: "center", margin: "20px 0" }}>

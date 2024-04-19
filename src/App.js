@@ -20,6 +20,7 @@ import Goatproduct from "./components/Animals/Goatproduct/Goatproduct.jsx";
 import Foodcrops from "./components/Crops/Foodcrops/Foodcrops.jsx";
 import CashProduct from "./components/Crops/Cashcrops/CashProduct.jsx";
 import PlantationsProduct from "./components/Crops/Plantationcrops/PlantationsProduct.jsx";
+import OrganicFer from "./components/Fertilizer/Fertilizers/OrganicFer.js";
 // import Profile from "./components/Dashboard/Profile.jsx";
 // Dashboard
 import Sidebar from "./components/Dashboard/components/Sidebar.jsx";
@@ -64,6 +65,7 @@ function App() {
           <Route path="Animals/Buffalo/Product" element={<Product />} />
           <Route path="Animals/Goat/Product" element={<Goatproduct />} />
           <Route path="Crops/CashCrops/Product" element={<CashProduct />} />
+          <Route path="Fertilizer/OrganicFertilizers/Product" element={<OrganicFer />} />
           <Route
             path="Crops/PlantationsCrops/Product"
             element={<PlantationsProduct />}

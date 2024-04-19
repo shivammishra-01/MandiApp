@@ -1,19 +1,19 @@
 // App.jsx
 
 import React, { useState, useEffect } from "react";
-import "../css/FertProcuts.css";
-import { listCrops } from "../../services/cropsService";
-import Buffalo from "../img/Crops.jpeg";
+// import "../Buffaloproduct/Animalss.css";
+import { listAnimal } from "../../services/animalServices";
+// import Buffalo from "../img/Crops.jpeg";
 
-function Foodcrops() {
+function OrganicFer() {
   // start
-  const [crops, setCrops] = useState([]);
+  const [animal, setAnimal] = useState([]);
 
   useEffect(() => {
-    listCrops()
+    listAnimal()
       .then((response) => {
         console.log(response.data);
-        setCrops(response.data);
+        setAnimal(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -199,28 +199,36 @@ function Foodcrops() {
           
             {/* cards */}
             {/* <div className="crop-container"> */}
-              {crops.map((crop) => (
+              {animal.map((animals) => (
                 <div
-                  key={crop.id}
+                  key={animals.id}
                   className="product-card"
                   data-category="clothing"
-                  data-brand={crop.brand}
+                  data-brand={animal.brand}
                 >
                   <img
-                    src={`http://localhost:8080/crops/${crop.image}`}
+                    src={`http://localhost:8080/animal/${animals.image}`}
                     alt="Product"
                     className="custom-product-image"
                   />
                   <div className="custom-product-info">
-                    <h4 className="custom-product-title">{crop.name}</h4>
+                    <h4 className="custom-product-title">{animals.name}</h4>
                     <p className="custom-product-description">
-                      <strong>Quantity:</strong> {crop.qnt} kg
+                      <strong>Quantity:</strong> {animals.qnt} kg
                     </p>
                     <p className="custom-product-description">
-                      <strong>Price:</strong> Rs {crop.price}
+                      <strong>Price:</strong> Rs {animals.price}
+                    </p>
+
+                    <p className="custom-product-description">
+                      <strong>Breed:</strong> {animals.breed}
+                    </p>
+
+                    <p className="custom-product-description">
+                      <strong>Age:</strong> {animals.age} years
                     </p>
                     <p className="custom-product-description">
-                      <strong>Variety:</strong> {crop.variety}
+                      <strong>Milk:</strong> {animals.milk} Kg
                     </p>
                     <button className="custom-add-to-cart-btn">
                       Buy/Book Now
@@ -244,4 +252,4 @@ function Foodcrops() {
   );
 }
 
-export default Foodcrops;
+export default OrganicFer;
