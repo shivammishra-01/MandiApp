@@ -1,8 +1,16 @@
 import React from "react";
 import AdminSidebar from "../components/AdminSidebar";
 import "./Pages.css";
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const UpdatePassword = () => {
+  const navigate = useNavigate();
+  const [oldpass, setOldpass] = useState("");
+  const [newpass, setNewpass] = useState("");
+  const [confirmpass, setConfirmpass] = useState("");
   return (
     <div className="dash-main">
       <AdminSidebar />

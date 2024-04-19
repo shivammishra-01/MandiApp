@@ -52,7 +52,7 @@ export default function AdminLogin() {
             headers: { "Content-Type": "application/json" },
           }
         );
-        if (res.status === 200) {
+        if (res.status === 200 && res.data) {
           localStorage.setItem("admin", JSON.stringify(res.data));
           navigate("/");
         } else {
