@@ -91,6 +91,7 @@ const Foodcrops = () => {
                   src={`http://localhost:8080/crops/${element.image}`}
                   alt="Product"
                   className="custom-product-image"
+                  style={{ width: "200px", height: "200px" }}
                 />
                 <div className="custom-product-info">
                   {/* <h6 className="custom-product-title">Product Name</h6> */}
@@ -102,7 +103,8 @@ const Foodcrops = () => {
                   </p>
                   <p className="custom-product-description">
                     <span className="nowrap">
-                      <strong>Price:</strong>{element.price}/kg
+                      <strong>Price:</strong>
+                      {element.price}/kg
                     </span>
                   </p>
                   <p className="custom-product-description">
@@ -111,10 +113,13 @@ const Foodcrops = () => {
                     </span>
                   </p>
 
-                  {isLoggedIn()?
-                  <button className="custom-add-to-cart-btn">
-                    Buy/Book Now
-                  </button>:''}
+                  {isLoggedIn() ? (
+                    <button className="custom-add-to-cart-btn">
+                      Buy/Book Now
+                    </button>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
             );

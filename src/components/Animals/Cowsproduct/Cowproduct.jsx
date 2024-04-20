@@ -196,49 +196,49 @@ function Cowproduct() {
           </div>
           <div className="right">
             {" "}
-          
             {/* cards */}
             {/* <div className="crop-container"> */}
-              {animal.map((animals) => (
-                <div
-                  key={animals.id}
-                  className="product-card"
-                  data-category="clothing"
-                  data-brand={animal.brand}
-                >
-                  <img
-                    src={`http://localhost:8080/animal/${animals.image}`}
-                    alt="Product"
-                    className="custom-product-image"
-                  />
-                  <div className="custom-product-info">
-                    <h4 className="custom-product-title">{animals.name}</h4>
-                    <p className="custom-product-description">
-                      <strong>Quantity:</strong> {animals.qnt} kg
-                    </p>
-                    <p className="custom-product-description">
-                      <strong>Price:</strong> Rs {animals.price}
-                    </p>
+            {animal.map((animals) => (
+              <div
+                key={animals.id}
+                className="product-card"
+                data-category="clothing"
+                data-brand={animal.brand}
+              >
+                <img
+                  src={`http://localhost:8080/animal/${animals.image}`}
+                  alt="Product"
+                  className="custom-product-image"
+                  style={{ width: "200px", height: "200px" }}
+                />
+                <div className="custom-product-info">
+                  <h4 className="custom-product-title">{animals.name}</h4>
+                  <p className="custom-product-description">
+                    <strong>Quantity:</strong> {animals.qnt} kg
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Price:</strong> Rs {animals.price}
+                  </p>
 
-                    <p className="custom-product-description">
-                      <strong>Breed:</strong> {animals.breed}
-                    </p>
+                  <p className="custom-product-description">
+                    <strong>Breed:</strong> {animals.breed}
+                  </p>
 
-                    <p className="custom-product-description">
-                      <strong>Age:</strong> {animals.age} years
-                    </p>
-                    <p className="custom-product-description">
-                      <strong>Milk:</strong> {animals.milk} Kg
-                    </p>
-                    <p className="custom-product-description">
-                      <strong>State:</strong> {animals.state} Kg
-                    </p>
-                    <button className="custom-add-to-cart-btn">
-                      Buy/Book Now
-                    </button>
-                  </div>
+                  <p className="custom-product-description">
+                    <strong>Age:</strong> {animals.age} years
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Milk:</strong> {animals.milk} Kg
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>State:</strong> {animals.state} Kg
+                  </p>
+                  <button className="custom-add-to-cart-btn">
+                    Buy/Book Now
+                  </button>
                 </div>
-              ))}
+              </div>
+            ))}
             {/* </div> */}
           </div>
         </div>

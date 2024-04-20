@@ -92,6 +92,7 @@ const Cashcrops = () => {
                   src={`http://localhost:8080/crops/${element.image}`}
                   alt="Product"
                   className="custom-product-image"
+                  style={{ width: "200px", height: "200px" }}
                 />
                 <div className="custom-product-info">
                   {/* <h6 className="custom-product-title">Product Name</h6> */}

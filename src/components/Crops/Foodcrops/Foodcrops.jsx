@@ -83,10 +83,9 @@ function Foodcrops() {
           Filter
         </button>
         <div className={`container ${showLeft ? "show-left" : ""}`}>
-         {/*  */}
+          {/*  */}
 
-         <div className="left" id="filterOptions">
-
+          <div className="left" id="filterOptions">
             <h2 style={{ color: "#333" }}>Filters</h2>
             <h3 style={{ color: "#555" }}>Paddy</h3>
             <label>
@@ -138,7 +137,7 @@ function Foodcrops() {
                 value="samsung"
                 className="filter-checkbox"
               />
-              Arborio 
+              Arborio
             </label>
             <br />
             <label>
@@ -198,7 +197,7 @@ function Foodcrops() {
             </button>
           </div>
 
-         {/*  */}
+          {/*  */}
           <div className="right">
             {filteredCrops.map((crop) => (
               <div
@@ -211,6 +210,7 @@ function Foodcrops() {
                   src={`http://localhost:8080/crops/${crop.image}`}
                   alt="Product"
                   className="custom-product-image"
+                  style={{ width: "200px", height: "200px" }}
                 />
                 <div className="custom-product-info">
                   <h4 className="custom-product-title">{crop.name}</h4>

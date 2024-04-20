@@ -1,66 +1,66 @@
-.producttt {
-  width: 100%;
-  margin: 10px;
-}
-.container {
-  display: flex;
-  /* max-width: fit-content; */
-}
-
-.left {
-  width: 20%;
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-.menu-button {
-  display: none;
-}
-
-.right {
-  width: 80%;
-  background-color: #e0e0e0;
-  padding: 75px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .product-card {
-  width: calc(100% - 20px);
-  max-width: calc(30% - 5px);
+  width: 240px; /* Set a fixed width */
+  height: auto; /* Allow height to adjust based on content */
+  max-height: 550px; /* Set a maximum height */
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-bottom: 20px;
-  padding: 50px;
+  padding: 20px; /* Reduce padding */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Increase scale on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.custom-product-info {
+  text-align: center;
+}
+
+.custom-product-title {
+  font-size: 20px; /* Reduce title font size */
+  margin-bottom: 10px;
+}
+
+.custom-product-description {
+  font-size: 16px; /* Reduce description font size */
+  margin-bottom: 5px;
+}
+
+.custom-add-to-cart-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px; /* Adjust button padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Add margin to the button */
+  transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+.custom-add-to-cart-btn:hover {
+  background-color: #45a049; /* Change background color on hover */
 }
 
 .product-card img {
   max-width: 100%;
   height: auto;
 }
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+.product-info-container {
+  max-height: 100px; /* Set a maximum height for the product information */
+  overflow: hidden; /* Hide overflow content */
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
-/* Media query for mobile devices */
+/* Media queries */
 @media (max-width: 767px) {
   .left {
     display: none; /* Hide left side by default on mobile */
   }
+
   .menu-button {
     display: block; /* Show menu button on mobile */
     position: fixed;
@@ -68,41 +68,17 @@ button:hover {
     left: 10px;
     z-index: 1000;
   }
+
   .container.show-left .left {
     display: block; /* Show left side when .show-left class is added */
   }
+
   .container.show-left .right {
     width: 100%; /* Make right side occupy full width when left side is shown */
   }
 
-  /* Adjust product card width for mobile */
-}
-
-/* Media query for tablets and larger */
-@media (min-width: 768px) {
-  /* Adjust product card width for tablets and larger screens */
-  .product-card {
-    width: calc(
-      50% - 20px
-    ); /* Two cards per row on tablets and larger screens */
-  }
-}
-@media (max-width: 767px) {
   .container {
     flex-direction: column; /* Change to column layout on mobile */
-  }
-
-  .left {
-    width: 100%; /* Take full width on mobile */
-    display: none; /* Hide left side by default on mobile */
-  }
-
-  .menu-button {
-    display: block; /* Show menu button on mobile */
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
   }
 
   .right {
@@ -115,53 +91,33 @@ button:hover {
     max-width: 100%; /* Full width on mobile */
     margin-bottom: 10px; /* Adjust margin for mobile */
   }
-}
 
-/* Media query for smaller screens */
-@media (max-width: 767px) {
   div.pagination button {
     margin: 5px;
   }
 }
-.producttt {
-  width: 100%;
-  margin: 10px;
-  text-align: center; /* Center align the pagination */
-}
-
-div.pagination {
-  margin-top: 20px;
-}
-
-.buttonz,
-.button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.buttonz:hover,
-.button:hover {
-  background-color: #45a049;
-}
-
-.buttonz:disabled,
-.button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-@media (max-width: 767px) {
-  div.pagination {
-    flex-direction: column; /* Change to column layout on mobile */
+/* Media query for tablets and larger */
+@media (min-width: 1000px) {
+  /* Adjust product card width for tablets and larger screens */
+  .product-card {
+    width: calc(
+      50% - 20px
+    ); /* Two cards per row on tablets and larger screens */
   }
+}
 
-  .buttonz,
-  .button {
-    margin: 5px;
+/* Media query for screens below 500px */
+@media (max-width: 499px) {
+  .product-card {
+    width: calc(100% - 20px); /* One card per row on screens below 500px */
+  }
+}
+
+/* Media query for screens between 500px and 1000px */
+@media (min-width: 500px) and (max-width: 999px) {
+  .product-card {
+    width: calc(
+      50% - 20px
+    ); /* Two cards per row on screens between 500px and 1000px */
   }
 }
