@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/FertProcuts.css";
 import { listCrops } from "../../services/cropsService";
-import Buffalo from "../img/Crops.jpeg";
+// import Buffalo from "../img/Crops.jpeg";
 
 function Foodcrops() {
   const [crops, setCrops] = useState([]);

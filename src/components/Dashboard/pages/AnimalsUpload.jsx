@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Sidebar from "../components/Sidebar";
 import "./pages.css";
 import img from "./farmer.png";
-import axios from 'axios'
+import axios from "axios";
 import { FarmerData } from "../../Farmer/Auth";
 import { createAnimals } from "../../services/animalServices";
 
@@ -22,35 +22,37 @@ const AnimalUpload = () => {
     setImage(e.target.files[0]);
   }
 
-
-  const saveOrUpdateAnimal=async(e)=> {
+  const saveOrUpdateAnimal = async (e) => {
     e.preventDefault();
 
-    const animals = { name, qnt, price, image ,
+    const animals = {
+      name,
+      qnt,
+      price,
+      image,
       farmerid: FarmerData().farmerid,
       state: FarmerData().state,
-       breed, age , milk
-
+      breed,
+      age,
+      milk,
     };
-    console.log(animals );
+    console.log(animals);
 
-    createAnimals(animals )
+    createAnimals(animals)
       .then((response) => {
         console.log(response.data);
 
-          // Clear the form 
-          setName("");
-          setQnt("");
-          setPrice("");
-          setBreed("");
-          setAge("");
-          setMilk("");
-          setImage(null);
-          document.getElementById('image').value = null;
+        // Clear the form
+        setName("");
+        setQnt("");
+        setPrice("");
+        setBreed("");
+        setAge("");
+        setMilk("");
+        setImage(null);
+        document.getElementById("image").value = null;
 
-
-
-        toast.success('Animal Added successfully..!', {
+        toast.success("Animal Added successfully..!", {
           position: "top-center",
           autoClose: 1000,
           hideProgressBar: false,
@@ -62,8 +64,8 @@ const AnimalUpload = () => {
         });
       })
       .catch((error) => {
-        console.error('Error adding crops:', error);
-        toast.error('Failed to add crops. Please try again.', {
+        console.error("Error adding crops:", error);
+        toast.error("Failed to add crops. Please try again.", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
@@ -74,7 +76,7 @@ const AnimalUpload = () => {
           theme: "colored",
         });
       });
-  }
+  };
 
   return (
     <div className="dash-main">
@@ -93,7 +95,6 @@ const AnimalUpload = () => {
             </div>
             <div className="col-lg-5 col-md-12 mt-5">
               <form onSubmit={saveOrUpdateAnimal}>
-
                 {/* <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">
@@ -111,29 +112,26 @@ const AnimalUpload = () => {
                   </div>
                 </div> */}
 
-                    <div className="mb-3">
-                    <div className="input-group">
-                      <span className="input-group-text">
-                        <i className="fa-solid fa-bag-shopping"></i>
-                      </span>
-                      <select
-                        className="form-select"
-                        id="name"
-                        name="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                      >
-                        <option value="">Select Animal Name</option>
-                        <option value="Cows">Cows</option>
-                        <option value="Buffalos ">Buffalos</option>
-                        <option value="Goats ">Goats</option>
-                        {/* Add more options as needed */}
-                      </select>
-                    </div>
-                    </div>
-
-
-
+                <div className="mb-3">
+                  <div className="input-group">
+                    <span className="input-group-text">
+                      <i className="fa-solid fa-bag-shopping"></i>
+                    </span>
+                    <select
+                      className="form-select"
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    >
+                      <option value="">Select Animal Name</option>
+                      <option value="Cows">Cows</option>
+                      <option value="Buffalos">Buffalos</option>
+                      <option value="Goats">Goats</option>
+                      {/* Add more options as needed */}
+                    </select>
+                  </div>
+                </div>
 
                 <div className="mb-3">
                   <div className="input-group">
@@ -241,10 +239,7 @@ const AnimalUpload = () => {
                 </div>
 
                 <div className="text-center mt-4">
-                  <button
-                    className="btn btn-success"
-                    type="submit"
-                  >
+                  <button className="btn btn-success" type="submit">
                     Upload
                   </button>
                   <button
@@ -258,7 +253,7 @@ const AnimalUpload = () => {
                       setAge("");
                       setMilk("");
                       setImage(null);
-                      document.getElementById('image').value = null;
+                      document.getElementById("image").value = null;
                     }}
                   >
                     Reset

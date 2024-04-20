@@ -5,18 +5,20 @@ import "slick-carousel/slick/slick-theme.css";
 import "./css/AnimalCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/buffalo.jpg";
-import axios from 'axios'
+import axios from "axios";
 
 const Buffalocard = () => {
   const [Buffalos, setBuffalos] = useState([]);
   const Buffalosdata = async () => {
-    const res = await axios.get('http://localhost:8080/api/animaltopname/Buffalos');
-    console.log(res)
-    setBuffalos(res.data)
-  }
+    const res = await axios.get(
+      "http://localhost:8080/api/animaltopname/Buffalos"
+    );
+    console.log(res);
+    setBuffalos(res.data);
+  };
   useEffect(() => {
     Buffalosdata();
-  }, [])
+  }, []);
   const settings = {
     // dots: true,
     speed: 500,
@@ -79,34 +81,42 @@ const Buffalocard = () => {
         </h2>
       </div>
       <Slider {...settings}>
-      {Buffalos && Buffalos.map((element,index) => {
-          return (
-            <div className="custom-product-card" key={index}>
-              <img src={murrah} alt="Product" className="custom-product-image" />
-              <div className="custom-product-info">
-                <h6 className="custom-product-title">{element.name}</h6>
-                <p className="custom-product-description">
-                  <strong>Breed:</strong>{element.breed}
-                </p>
-                <p className="custom-product-description">
-                  <strong>Qua:</strong> 10L/Day
-                </p>
-                <p className="custom-product-description">
-                  <span className="nowrap">
-                    <strong>Price:</strong>₹ {element.price}
-                  </span>
-                </p>
-                <p className="custom-product-description">
-                  <span className="nowrap">
-                    <strong>Quntity:</strong> {element.qnt}
-                  </span>
-                </p>
+        {Buffalos &&
+          Buffalos.map((element, index) => {
+            return (
+              <div className="custom-product-card" key={index}>
+                <img
+                  src={murrah}
+                  alt="Product"
+                  className="custom-product-image"
+                />
+                <div className="custom-product-info">
+                  <h6 className="custom-product-title">{element.name}</h6>
+                  <p className="custom-product-description">
+                    <strong>Breed:</strong>
+                    {element.breed}
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Qua:</strong> 10L/Day
+                  </p>
+                  <p className="custom-product-description">
+                    <span className="nowrap">
+                      <strong>Price:</strong>₹ {element.price}
+                    </span>
+                  </p>
+                  <p className="custom-product-description">
+                    <span className="nowrap">
+                      <strong>Quntity:</strong> {element.qnt}
+                    </span>
+                  </p>
 
-                <button className="custom-add-to-cart-btn">Buy/Book Now</button>
+                  <button className="custom-add-to-cart-btn">
+                    Buy/Book Now
+                  </button>
+                </div>
               </div>
-            </div>
-          )
-        })}
+            );
+          })}
       </Slider>
     </div>
   );

@@ -107,6 +107,15 @@ export default function Navbar() {
                   {/* Add more dropdown items as needed */}
                 </ul>
               </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/Contact"
+                >
+                  <i class="fa-solid fa-address-book"></i> Contact
+                </Link>
+              </li>
               {isLoggedIn() || isAdminLoggedIn() ? (
                 ""
               ) : (
