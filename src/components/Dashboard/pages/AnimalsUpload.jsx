@@ -23,18 +23,18 @@ const AnimalUpload = () => {
   }
 
 
-  const saveOrUpdateCrops=async(e)=> {
+  const saveOrUpdateAnimal=async(e)=> {
     e.preventDefault();
 
-    const crops = { name, qnt, price, image ,
+    const animals = { name, qnt, price, image ,
       farmerid: FarmerData().farmerid,
       state: FarmerData().state,
        breed, age , milk
 
     };
-    console.log(crops);
+    console.log(animals );
 
-    createAnimals(crops)
+    createAnimals(animals )
       .then((response) => {
         console.log(response.data);
 
@@ -81,7 +81,7 @@ const AnimalUpload = () => {
       <Sidebar />
       <div className="container mt-3">
         <div className="card shadow" style={{ backgroundColor: "green" }}>
-          <h1 className="text-center">Crops Upload</h1>
+          <h1 className="text-center">Animal Upload</h1>
           <div className="row">
             <div className="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
               <img
@@ -92,8 +92,9 @@ const AnimalUpload = () => {
               />
             </div>
             <div className="col-lg-5 col-md-12 mt-5">
-              <form onSubmit={saveOrUpdateCrops}>
-                <div className="mb-3">
+              <form onSubmit={saveOrUpdateAnimal}>
+
+                {/* <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">
                       <i className="fa-solid fa-bag-shopping"></i>
@@ -108,7 +109,32 @@ const AnimalUpload = () => {
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
-                </div>
+                </div> */}
+
+                    <div className="mb-3">
+                    <div className="input-group">
+                      <span className="input-group-text">
+                        <i className="fa-solid fa-bag-shopping"></i>
+                      </span>
+                      <select
+                        className="form-select"
+                        id="name"
+                        name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      >
+                        <option value="">Select Animal Name</option>
+                        <option value="Cows">Cows</option>
+                        <option value="Buffalos ">Buffalos</option>
+                        <option value="Goats ">Goats</option>
+                        {/* Add more options as needed */}
+                      </select>
+                    </div>
+                    </div>
+
+
+
+
                 <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">

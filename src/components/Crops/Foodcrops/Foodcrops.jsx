@@ -1,13 +1,12 @@
-// App.jsx
-
 import React, { useState, useEffect } from "react";
 import "../css/FertProcuts.css";
 import { listCrops } from "../../services/cropsService";
 import Buffalo from "../img/Crops.jpeg";
 
 function Foodcrops() {
-  // start
   const [crops, setCrops] = useState([]);
+  const [showLeft, setShowLeft] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     listCrops()
@@ -20,15 +19,15 @@ function Foodcrops() {
       });
   }, []);
 
-  // ends
-
-  const [showLeft, setShowLeft] = useState(false);
-
-  function toggleFilters() {
+  const toggleFilters = () => {
     setShowLeft(!showLeft);
-  }
+  };
 
-  function filterProducts() {
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filterProducts = () => {
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const productCards = document.querySelectorAll(".product-card");
 
@@ -48,34 +47,35 @@ function Foodcrops() {
         card.style.display = "none";
       }
     });
-  }
+  };
 
-  function clearFilters() {
+  const clearFilters = () => {
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     checkboxes.forEach((checkbox) => {
       checkbox.checked = false;
     });
     filterProducts();
-  }
+  };
+
+  // Filter crops based on search query
+  const filteredCrops = crops.filter((crop) =>
+    crop.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div>
-      {" "}
       <div className="topnavv">
-        {" "}
-        {/* Use the same class name as in your HTML */}
         <a className="active" href="#home">
           MANDI.COM - Your Livestock Marketplace
         </a>
         <div className="search-coontainer">
-          {" "}
-          {/* Use the same class name as in your HTML */}
-          <form action="/action_page.php">
-            <input type="text" placeholder="Search for Animals" name="search" />
-            <button type="submit">
-              <i className="fa fa-search"></i>
-            </button>
-          </form>
+          <input
+            type="text"
+            placeholder="Search for crops"
+            name="search"
+            id="crops"
+            onChange={handleSearch}
+          />
         </div>
       </div>
       <div className="producttt">
@@ -83,9 +83,12 @@ function Foodcrops() {
           Filter
         </button>
         <div className={`container ${showLeft ? "show-left" : ""}`}>
-          <div className="left" id="filterOptions">
+         {/*  */}
+
+         <div className="left" id="filterOptions">
+
             <h2 style={{ color: "#333" }}>Filters</h2>
-            <h3 style={{ color: "#555" }}>Cows</h3>
+            <h3 style={{ color: "#555" }}>Paddy</h3>
             <label>
               <input
                 type="checkbox"
@@ -93,7 +96,7 @@ function Foodcrops() {
                 value="electronics"
                 className="filter-checkbox"
               />
-              Jersey
+              Mini
             </label>
             <br />
             <label>
@@ -103,7 +106,7 @@ function Foodcrops() {
                 value="clothing"
                 className="filter-checkbox"
               />
-              Shorthorn
+              katrani
             </label>
             <br />
             <label>
@@ -113,11 +116,11 @@ function Foodcrops() {
                 value="books"
                 className="filter-checkbox"
               />
-              Red Sindhi
+              sonchur
             </label>
             <br />
 
-            <h3 style={{ color: "#555" }}>Buffalo</h3>
+            <h3 style={{ color: "#555" }}>Rice</h3>
             <label>
               <input
                 type="checkbox"
@@ -125,7 +128,7 @@ function Foodcrops() {
                 value="Buffalo"
                 className="filter-checkbox"
               />
-              Buffalo
+              Basmati
             </label>
             <br />
             <label>
@@ -135,7 +138,7 @@ function Foodcrops() {
                 value="samsung"
                 className="filter-checkbox"
               />
-              Surti
+              Arborio 
             </label>
             <br />
             <label>
@@ -145,11 +148,11 @@ function Foodcrops() {
                 value="nike"
                 className="filter-checkbox"
               />
-              Jaffrabadi
+              Jasmine
             </label>
             <br />
 
-            <h3 style={{ color: "#555" }}>Goat</h3>
+            <h3 style={{ color: "#555" }}>Wheat</h3>
             <label>
               <input
                 type="checkbox"
@@ -157,7 +160,7 @@ function Foodcrops() {
                 value="apple"
                 className="filter-checkbox"
               />
-              Barbari
+              Sriram
             </label>
             <br />
             <label>
@@ -167,7 +170,7 @@ function Foodcrops() {
                 value="samsung"
                 className="filter-checkbox"
               />
-              Tellicherry
+              Spelt
             </label>
             <br />
             <label>
@@ -177,7 +180,7 @@ function Foodcrops() {
                 value="nike"
                 className="filter-checkbox"
               />
-              Sirohi
+              Emmer
             </label>
             <br />
 
@@ -194,41 +197,41 @@ function Foodcrops() {
               Clear Filters
             </button>
           </div>
+
+         {/*  */}
           <div className="right">
-            {" "}
-          
-            {/* cards */}
-            {/* <div className="crop-container"> */}
-              {crops.map((crop) => (
-                <div
-                  key={crop.id}
-                  className="product-card"
-                  data-category="clothing"
-                  data-brand={crop.brand}
-                >
-                  <img
-                    src={`http://localhost:8080/crops/${crop.image}`}
-                    alt="Product"
-                    className="custom-product-image"
-                  />
-                  <div className="custom-product-info">
-                    <h4 className="custom-product-title">{crop.name}</h4>
-                    <p className="custom-product-description">
-                      <strong>Quantity:</strong> {crop.qnt} kg
-                    </p>
-                    <p className="custom-product-description">
-                      <strong>Price:</strong> Rs {crop.price}
-                    </p>
-                    <p className="custom-product-description">
-                      <strong>Variety:</strong> {crop.variety}
-                    </p>
-                    <button className="custom-add-to-cart-btn">
-                      Buy/Book Now
-                    </button>
-                  </div>
+            {filteredCrops.map((crop) => (
+              <div
+                key={crop.id}
+                className="product-card"
+                data-category="clothing"
+                data-brand={crop.brand}
+              >
+                <img
+                  src={`http://localhost:8080/crops/${crop.image}`}
+                  alt="Product"
+                  className="custom-product-image"
+                />
+                <div className="custom-product-info">
+                  <h4 className="custom-product-title">{crop.name}</h4>
+                  <p className="custom-product-description">
+                    <strong>Quantity:</strong> {crop.qnt} kg
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Price:</strong> Rs {crop.price}
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Variety:</strong> {crop.variety}
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>State:</strong> {crop.state}
+                  </p>
+                  <button className="custom-add-to-cart-btn">
+                    Buy/Book Now
+                  </button>
                 </div>
-              ))}
-            {/* </div> */}
+              </div>
+            ))}
           </div>
         </div>
         <div style={{ textAlign: "center", margin: "20px 0" }}>

@@ -1,19 +1,19 @@
 // App.jsx
 
 import React, { useState, useEffect } from "react";
+import { listFertilizer } from "../../services/fertilizerServices";
 // import "../Buffaloproduct/Animalss.css";
-import { listAnimal } from "../../services/animalServices";
 // import Buffalo from "../img/Crops.jpeg";
 
 function OrganicFer() {
   // start
-  const [animal, setAnimal] = useState([]);
+  const [fertilizer, setFertilizer] = useState([]);
 
   useEffect(() => {
-    listAnimal()
+    listFertilizer()
       .then((response) => {
         console.log(response.data);
-        setAnimal(response.data);
+        setFertilizer(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -65,13 +65,13 @@ function OrganicFer() {
         {" "}
         {/* Use the same class name as in your HTML */}
         <a className="active" href="#home">
-          MANDI.COM - Your Livestock Marketplace
+          MANDI.COM - Your Livestock Fertilizers Marketplace
         </a>
         <div className="search-coontainer">
           {" "}
           {/* Use the same class name as in your HTML */}
           <form action="/action_page.php">
-            <input type="text" placeholder="Search for Animals" name="search" />
+            <input type="text" placeholder="Search for fertilizer" name="search" />
             <button type="submit">
               <i className="fa fa-search"></i>
             </button>
@@ -85,7 +85,7 @@ function OrganicFer() {
         <div className={`container ${showLeft ? "show-left" : ""}`}>
           <div className="left" id="filterOptions">
             <h2 style={{ color: "#333" }}>Filters</h2>
-            <h3 style={{ color: "#555" }}>Cows</h3>
+            <h3 style={{ color: "#555" }}>Urea</h3>
             <label>
               <input
                 type="checkbox"
@@ -93,7 +93,7 @@ function OrganicFer() {
                 value="electronics"
                 className="filter-checkbox"
               />
-              Jersey
+              Npk
             </label>
             <br />
             <label>
@@ -103,7 +103,7 @@ function OrganicFer() {
                 value="clothing"
                 className="filter-checkbox"
               />
-              Shorthorn
+             TSP
             </label>
             <br />
             <label>
@@ -113,11 +113,11 @@ function OrganicFer() {
                 value="books"
                 className="filter-checkbox"
               />
-              Red Sindhi
+              Manure
             </label>
             <br />
 
-            <h3 style={{ color: "#555" }}>Buffalo</h3>
+            <h3 style={{ color: "#555" }}>Potash</h3>
             <label>
               <input
                 type="checkbox"
@@ -125,7 +125,7 @@ function OrganicFer() {
                 value="Buffalo"
                 className="filter-checkbox"
               />
-              Buffalo
+              Rock phospate
             </label>
             <br />
             <label>
@@ -135,7 +135,7 @@ function OrganicFer() {
                 value="samsung"
                 className="filter-checkbox"
               />
-              Surti
+              Zinc Sulphate
             </label>
             <br />
             <label>
@@ -145,12 +145,13 @@ function OrganicFer() {
                 value="nike"
                 className="filter-checkbox"
               />
-              Jaffrabadi
+              N.P. (Mixture)
             </label>
             <br />
 
-            <h3 style={{ color: "#555" }}>Goat</h3>
-            <label>
+
+            {/* <h3 style={{ color: "#555" }}>Goat</h3> */}
+            {/* <label>
               <input
                 type="checkbox"
                 name="brand"
@@ -158,9 +159,9 @@ function OrganicFer() {
                 className="filter-checkbox"
               />
               Barbari
-            </label>
+            </label> */}
             <br />
-            <label>
+            {/* <label>
               <input
                 type="checkbox"
                 name="brand"
@@ -168,7 +169,7 @@ function OrganicFer() {
                 className="filter-checkbox"
               />
               Tellicherry
-            </label>
+            </label> */}
             <br />
             <label>
               <input
@@ -177,7 +178,7 @@ function OrganicFer() {
                 value="nike"
                 className="filter-checkbox"
               />
-              Sirohi
+              {/* Sirohi */}
             </label>
             <br />
 
@@ -199,37 +200,36 @@ function OrganicFer() {
           
             {/* cards */}
             {/* <div className="crop-container"> */}
-              {animal.map((animals) => (
+              {fertilizer.map((fertilizers) => (
                 <div
-                  key={animals.id}
+                  key={fertilizers.id}
                   className="product-card"
                   data-category="clothing"
-                  data-brand={animal.brand}
+                  data-brand={fertilizers.brand}
                 >
                   <img
-                    src={`http://localhost:8080/animal/${animals.image}`}
+                    src={`http://localhost:8080/fertilizer/${fertilizers.image}`}
                     alt="Product"
                     className="custom-product-image"
                   />
                   <div className="custom-product-info">
-                    <h4 className="custom-product-title">{animals.name}</h4>
+                    <h4 className="custom-product-title">{fertilizers.name}</h4>
                     <p className="custom-product-description">
-                      <strong>Quantity:</strong> {animals.qnt} kg
+                      <strong>Quantity:</strong> {fertilizers.qnt} kg
                     </p>
                     <p className="custom-product-description">
-                      <strong>Price:</strong> Rs {animals.price}
-                    </p>
-
-                    <p className="custom-product-description">
-                      <strong>Breed:</strong> {animals.breed}
+                      <strong>Price:</strong> Rs {fertilizers.price}
                     </p>
 
                     <p className="custom-product-description">
-                      <strong>Age:</strong> {animals.age} years
+                      <strong>type:</strong> {fertilizers.type}
                     </p>
+
                     <p className="custom-product-description">
-                      <strong>Milk:</strong> {animals.milk} Kg
+                      <strong>State:</strong> {fertilizers.state}
                     </p>
+
+
                     <button className="custom-add-to-cart-btn">
                       Buy/Book Now
                     </button>

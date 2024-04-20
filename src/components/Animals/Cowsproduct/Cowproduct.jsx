@@ -230,6 +230,9 @@ function Cowproduct() {
                     <p className="custom-product-description">
                       <strong>Milk:</strong> {animals.milk} Kg
                     </p>
+                    <p className="custom-product-description">
+                      <strong>State:</strong> {animals.state} Kg
+                    </p>
                     <button className="custom-add-to-cart-btn">
                       Buy/Book Now
                     </button>

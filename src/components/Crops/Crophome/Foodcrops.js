@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/CropCard.css";
 import { Link } from "react-router-dom";
-
-import murrah from "../img/Crops.jpeg";
+import axios from "axios";
+import { isLoggedIn } from "../../Farmer/Auth";
 
 const Foodcrops = () => {
+  const [foodcrop, setFoodcrop] = useState([]);
+  const foodcrops = async () => {
+    const res = await axios.get(
+      "http://localhost:8080/api/croptopname/Foodcrops",
+      { headers: { "Content-Type": "application/json" } }
+    );
+    if (res.status === 200 && res.data.length !== 0) {
+      setFoodcrop(res.data);
+    }
+  };
+  useEffect(() => {
+    foodcrops();
+  }, []);
   const settings = {
     // dots: true,
     speed: 500,
@@ -70,174 +83,42 @@ const Foodcrops = () => {
         </h2>
       </div>
       <Slider {...settings}>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
+        {foodcrop &&
+          foodcrop.map((element, index) => {
+            return (
+              <div className="custom-product-card">
+                <img
+                  src={`http://localhost:8080/crops/${element.image}`}
+                  alt="Product"
+                  className="custom-product-image"
+                />
+                <div className="custom-product-info">
+                  {/* <h6 className="custom-product-title">Product Name</h6> */}
+                  <p className="custom-product-description">
+                    <strong>{element.name}</strong>
+                  </p>
+                  <p className="custom-product-description">
+                    <strong>Qnt:</strong> {element.qnt} kg
+                  </p>
+                  <p className="custom-product-description">
+                    <span className="nowrap">
+                      <strong>Price:</strong>{element.price}/kg
+                    </span>
+                  </p>
+                  <p className="custom-product-description">
+                    <span className="nowrap">
+                      <strong>Variety:</strong> {element.variety}
+                    </span>
+                  </p>
 
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Times:</strong> 1year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
-        <div className="custom-product-card">
-          <img src={murrah} alt="Product" className="custom-product-image" />
-          <div className="custom-product-info">
-            {/* <h6 className="custom-product-title">Product Name</h6> */}
-            <p className="custom-product-description">
-              <strong>Place:</strong>Name
-            </p>
-            <p className="custom-product-description">
-              <strong>Qua:</strong> 10000 Kg
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Price:</strong>₹ 18 Per Kg
-              </span>
-            </p>
-            <p className="custom-product-description">
-              <span className="nowrap">
-                <strong>Age:</strong> 5year(s)
-              </span>
-            </p>
-
-            <button className="custom-add-to-cart-btn">Buy/Book Now</button>
-          </div>
-        </div>
+                  {isLoggedIn()?
+                  <button className="custom-add-to-cart-btn">
+                    Buy/Book Now
+                  </button>:''}
+                </div>
+              </div>
+            );
+          })}
       </Slider>
     </div>
   );

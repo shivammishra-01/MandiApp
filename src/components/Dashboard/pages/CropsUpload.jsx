@@ -10,6 +10,7 @@ import { createCrops } from "../../services/cropsService";
 import { FarmerData } from "../../Farmer/Auth";
 
 const CropsUpload = () => {
+  const [type, setType] = useState("");
   const [name, setName] = useState("");
   const [qnt, setQnt] = useState("");
   const [price, setPrice] = useState("");
@@ -24,7 +25,7 @@ const CropsUpload = () => {
   const saveOrUpdateCrops=async(e)=> {
     e.preventDefault();
 
-    const crops = { name, qnt, price, variety, image ,
+    const crops = { type, name, qnt, price, variety, image ,
       farmerid: FarmerData().farmerid,
       state: FarmerData().state,
 
@@ -36,6 +37,7 @@ const CropsUpload = () => {
         console.log(response.data);
 
           // Clear the form 
+          setType("");
           setName("");
           setQnt("");
           setPrice("");
@@ -88,6 +90,47 @@ const CropsUpload = () => {
             </div>
             <div className="col-lg-5 col-md-12 mt-5">
               <form onSubmit={saveOrUpdateCrops}>
+
+                 {/* <div className="mb-3">
+                    <div className="input-group">
+                      <span className="input-group-text">
+                        <i class="fas fa-sort-amount-up"></i>
+                      </span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="type"
+                        name="type"
+                        value={type}
+                        autoComplete="off"
+                        placeholder="Crops Type"
+                        onChange={(e) => setType(e.target.value)}
+                      />
+                    </div>
+                  </div> */}
+
+                    <div className="mb-3">
+                    <div className="input-group">
+                      <span className="input-group-text">
+                        <i className="fas fa-sort-amount-up"></i>
+                      </span>
+                      <select
+                        className="form-select"
+                        id="type"
+                        name="type"
+                        value={type}
+                        onChange={(e) => setType(e.target.value)}
+                      >
+                        <option value="">Select Crop Type</option>
+                        <option value="Foodcrops">Foodcrops</option>
+                        <option value="Plantationcrops">Plantationcrops</option>
+                        <option value="Cashcrops">Cashcrops</option>
+                      </select>
+                    </div>
+                    </div>
+
+
+
                 <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">
@@ -104,6 +147,7 @@ const CropsUpload = () => {
                     />
                   </div>
                 </div>
+
                 <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">
@@ -121,6 +165,8 @@ const CropsUpload = () => {
                     />
                   </div>
                 </div>
+
+
                 <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">
@@ -184,6 +230,7 @@ const CropsUpload = () => {
                     className="btn btn-danger"
                     type="button"
                     onClick={() => {
+                      setType("");
                       setName("");
                       setQnt("");
                       setPrice("");
