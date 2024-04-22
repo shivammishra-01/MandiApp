@@ -48,6 +48,11 @@ import UpdateProfile from "./components/Dashboard/Admin/Pages/UpdateProfile.jsx"
 import UpdatePassword from "./components/Dashboard/Admin/Pages/UpdatePassword.jsx";
 import Farmerproduct from "./components/Dashboard/Admin/Pages/Farmerproduct.jsx";
 import ContactList from "./components/Dashboard/Admin/Pages/ContactList.js";
+import CropsLista from "./components/Dashboard/Admin/Pages/cropsLista.jsx";
+import AnimalsList from "./components/Dashboard/Admin/Pages/AnimalsList.jsx";
+import FertilizersList from "./components/Dashboard/Admin/Pages/FertilizersList.jsx";
+
+
 import AboutUpdate from "./components/Dashboard/Admin/Pages/AboutUpdate.jsx";
 import AdminRoute from "./components/Dashboard/Admin/AdminRoute.js";
 function App() {
@@ -117,6 +122,9 @@ function App() {
             <Route exact path={`Farmerproduct`} element={<Farmerproduct />} />
             <Route exact path={`ContactList`} element={<ContactList />} />
             <Route exact path={`AboutUpdate`} element={<AboutUpdate />} />
+            <Route exact path={`CropsLista`} element={<CropsLista />} />
+            <Route exact path={`AnimalsList`} element={<AnimalsList />} />
+            <Route exact path={`FertilizersList`} element={<FertilizersList />} />
 
           </Route>
         </Routes>
