@@ -95,23 +95,6 @@ const AnimalUpload = () => {
             </div>
             <div className="col-lg-5 col-md-12 mt-5">
               <form onSubmit={saveOrUpdateAnimal}>
-                {/* <div className="mb-3">
-                  <div className="input-group">
-                    <span className="input-group-text">
-                      <i className="fa-solid fa-bag-shopping"></i>
-                    </span>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="name"
-                      name="name"
-                      value={name}
-                      placeholder="Animal Name"
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </div>
-                </div> */}
-
                 <div className="mb-3">
                   <div className="input-group">
                     <span className="input-group-text">

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Sidebar from "../components/Sidebar";
 import "./pages.css";
 import img from "./farmer.png";
-import axios from 'axios'
+import axios from "axios";
 import { FarmerData } from "../../Farmer/Auth";
 import { createFertilizer } from "../../services/fertilizerServices";
 
@@ -20,14 +20,17 @@ const FertilizerUpload = () => {
     setImage(e.target.files[0]);
   }
 
-
-  const saveOrUpdateFertilizer=async(e)=> {
+  const saveOrUpdateFertilizer = async (e) => {
     e.preventDefault();
 
-    const fertilizer = { name, qnt, price, type, image ,
+    const fertilizer = {
+      name,
+      qnt,
+      price,
+      type,
+      image,
       farmerid: FarmerData().farmerid,
       state: FarmerData().state,
-
     };
     console.log(fertilizer);
 
@@ -35,17 +38,15 @@ const FertilizerUpload = () => {
       .then((response) => {
         console.log(response.data);
 
-          // Clear the form 
-          setName("");
-          setQnt("");
-          setPrice("");
-          setType("");
-          setImage(null);
-          document.getElementById('image').value = null;
+        // Clear the form
+        setName("");
+        setQnt("");
+        setPrice("");
+        setType("");
+        setImage(null);
+        document.getElementById("image").value = null;
 
-
-
-        toast.success('Fertilizer Added successfully..!', {
+        toast.success("Fertilizer Added successfully..!", {
           position: "top-center",
           autoClose: 1000,
           hideProgressBar: false,
@@ -57,8 +58,8 @@ const FertilizerUpload = () => {
         });
       })
       .catch((error) => {
-        console.error('Error adding Fertilizer:', error);
-        toast.error('Failed to add Fertilizer. Please try again.', {
+        console.error("Error adding Fertilizer:", error);
+        toast.error("Failed to add Fertilizer. Please try again.", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
@@ -69,7 +70,7 @@ const FertilizerUpload = () => {
           theme: "colored",
         });
       });
-  }
+  };
 
   return (
     <div className="dash-main">
@@ -144,16 +145,19 @@ const FertilizerUpload = () => {
                     <span className="input-group-text">
                       <i className="fa-solid fa-thumbs-up"></i>
                     </span>
-                    <input
-                      type="text"
-                      className="form-control"
+                    <select
+                      className="form-select"
                       id="type"
                       name="type"
                       value={type}
-                      autoComplete="off"
-                      placeholder="Fertilizer Type"
                       onChange={(e) => setType(e.target.value)}
-                    />
+                    >
+                      <option value="">Select Fertilizer Type</option>
+                      <option value="Organic">Organic</option>
+                      <option value="Inorganic">Inorganic</option>
+                      <option value="Liquid">Liquid</option>
+                      {/* Add more options as needed */}
+                    </select>
                   </div>
                 </div>
 
@@ -174,10 +178,7 @@ const FertilizerUpload = () => {
                 </div>
 
                 <div className="text-center mt-4">
-                  <button
-                    className="btn btn-success"
-                    type="submit"
-                  >
+                  <button className="btn btn-success" type="submit">
                     Upload
                   </button>
                   <button
@@ -189,7 +190,7 @@ const FertilizerUpload = () => {
                       setPrice("");
                       setType("");
                       setImage(null);
-                      document.getElementById('image').value = null;
+                      document.getElementById("image").value = null;
                     }}
                   >
                     Reset

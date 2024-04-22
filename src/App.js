@@ -22,7 +22,7 @@ import CashProduct from "./components/Crops/Cashcrops/CashProduct.jsx";
 import PlantationsProduct from "./components/Crops/Plantationcrops/PlantationsProduct.jsx";
 import OrganicFer from "./components/Fertilizer/Fertilizers/OrganicFer.js";
 // import Profile from "./components/Dashboard/Profile.jsx";
-// Dashboard
+// Farmer Dashboard
 import Sidebar from "./components/Dashboard/components/Sidebar.jsx";
 import Dashboard from "./components/Dashboard/pages/Dashboard.jsx";
 import User from "./components/Dashboard/pages/UserList.jsx";
@@ -32,8 +32,12 @@ import Userlist from "./components/Dashboard/pages/Product.jsx";
 import ProductList from "./components/Dashboard/pages/ProductList.jsx";
 import UploadProduct from "./components/Dashboard/pages/UploadProduct.jsx";
 import CropsUpload from "./components/Dashboard/pages/CropsUpload.jsx";
+import CropsList from "./components/Dashboard/pages/CropsList.jsx";
 import AnimalsUpload from "./components/Dashboard/pages/AnimalsUpload.jsx";
+import AnimalList from "./components/Dashboard/pages/AnimalList.jsx";
 import FertilizerUpload from "./components/Dashboard/pages/FertilizerUpload.jsx";
+import FertilizerList from "./components/Dashboard/pages/FertilizerList.jsx";
+
 import ChangePassword from "./components/Dashboard/pages/ChangePassword.jsx";
 import UpdateProfiles from "./components/Dashboard/pages/UpdateProfiles.jsx";
 // AdminDashboard
@@ -43,6 +47,8 @@ import AdminDashboard from "./components/Dashboard/Admin/Pages/AdminDashboard.js
 import UpdateProfile from "./components/Dashboard/Admin/Pages/UpdateProfile.jsx";
 import UpdatePassword from "./components/Dashboard/Admin/Pages/UpdatePassword.jsx";
 import Farmerproduct from "./components/Dashboard/Admin/Pages/Farmerproduct.jsx";
+import ContactList from "./components/Dashboard/Admin/Pages/ContactList.js";
+import AboutUpdate from "./components/Dashboard/Admin/Pages/AboutUpdate.jsx";
 import AdminRoute from "./components/Dashboard/Admin/AdminRoute.js";
 function App() {
   return (
@@ -76,22 +82,32 @@ function App() {
           <Route exact path="/analytics" element={<Analytics />} />
           <Route exact path="/Userlist" element={<Userlist />} />
 
+          {/* Farmer Dahboard */}
+
           <Route exact path="/farmer" element={<PrivateRoute />}>
             <Route exact path={`dashboard`} element={<Dashboard />} />
             <Route exact path={`Sidebar`} element={<Sidebar />} />
             <Route exact path={`CropsUpload`} element={<CropsUpload />} />
+            <Route exact path={`CropsList`} element={<CropsList />} />
+
             <Route
               exact
               path={`FertilizerUpload`}
               element={<FertilizerUpload />}
             />
+
+            <Route exact path={`FertilizerList`} element={<FertilizerList />} />
             <Route exact path={`AnimalsUpload`} element={<AnimalsUpload />} />
+            <Route exact path={`AnimalList`} element={<AnimalList/>} />
+
             <Route exact path={`UploadProduct`} element={<UploadProduct />} />
             <Route exact path={`productList`} element={<ProductList />} />
             <Route exact path={`ChangePassword`} element={<ChangePassword />} />
             <Route exact path={`UpdateProfiles`} element={<UpdateProfiles />} />
           </Route>
 
+            {/* Admin DashBoard */}
+             
           <Route exact path="/admin" element={<AdminRoute />}>
             <Route exact path={`AdminSidebar`} element={<AdminSidebar />} />
             <Route exact path={`FarmerList`} element={<FarmerList />} />
@@ -99,6 +115,9 @@ function App() {
             <Route exact path={`UpdateProfile`} element={<UpdateProfile />} />
             <Route exact path={`UpdatePassword`} element={<UpdatePassword />} />
             <Route exact path={`Farmerproduct`} element={<Farmerproduct />} />
+            <Route exact path={`ContactList`} element={<ContactList />} />
+            <Route exact path={`AboutUpdate`} element={<AboutUpdate />} />
+
           </Route>
         </Routes>
         <Footer />

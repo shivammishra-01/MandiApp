@@ -38,9 +38,23 @@ const AdminSidebar = ({ children }) => {
       name: "Analytics",
       icon: <FaRegChartBar />,
     },
+
     {
-      path: "/admin/comment",
-      name: "Comment",
+      path: "/admin/AboutUpdate",
+      name: "AboutUpdate",
+      icon: <FaRegChartBar />,
+    },
+
+    {
+      path: "/admin/FarmerList",
+      name: "FarmerList",
+      icon: <FaRegChartBar />,
+    },
+    
+
+    {
+      path: "/admin/ContactList",
+      name: "Contact List",
       icon: <FaCommentAlt />,
     },
     {
@@ -49,11 +63,6 @@ const AdminSidebar = ({ children }) => {
       icon: <FaShoppingBag />,
     },
 
-    {
-      path: "/FarmerList",
-      name: "Farmer List",
-      icon: <FaThList />,
-    },
   ];
   return (
     <div className="">
