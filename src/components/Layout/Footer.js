@@ -9,8 +9,9 @@ const Footer = () => {
           <div className="col-md-3 col-lg-4 col-xl-3">
             <h6 className="text-uppercase fw-bold head">Mandi.com</h6>
             <p>
-              Here you can use rows and columns to organize your footer content.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Mandi.com is your one-stop platform for all agricultural needs.
+              From crops to animals and fertilizers, we provide a seamless
+              marketplace experience.
             </p>
           </div>
 
@@ -36,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-3 col-lg-2 col-xl-2">
-            <h6 className="text-uppercase fw-bold head">Useful links</h6>
+            <h6 className="text-uppercase fw-bold head">Useful Links</h6>
             <ul className="list-unstyled">
               <li>
                 <a href="#!" className="text-white para">
@@ -79,6 +80,43 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
+        {/* Newsletter Subscription */}
+        <div className="row newsletter">
+          <div className="col-md-12">
+            <h6 className="text-uppercase fw-bold head">
+              Subscribe to Our Newsletter
+            </h6>
+            <p className="para">
+              Stay updated with the latest news and offers from Mandi.com!
+            </p>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+            />
+            <button className="newsletter-btn">Subscribe</button>
+          </div>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="row social-links">
+          <div className="col-md-12 text-center">
+            <h6 className="text-uppercase fw-bold head">Follow Us</h6>
+            <a href="#" className="social-icon">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="#" className="social-icon">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="#" className="social-icon">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="#" className="social-icon">
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="background">
@@ -90,7 +128,7 @@ const Footer = () => {
         style={{ backgroundColor: "rgba(75, 150, 60, 0.2)" }}
       >
         © 2023 project:
-        <a className="text-white" href="#" para>
+        <a className="text-white" href="#">
           mandi.com
         </a>
       </div>
