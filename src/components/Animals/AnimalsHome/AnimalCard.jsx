@@ -6,8 +6,11 @@ import "./css/AnimalCard.css";
 import { Link } from "react-router-dom";
 import murrah from "../img/cows.jpg";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { isLoggedIn } from "../../Farmer/Auth";
 
 const AnimalCard = () => {
+  const navigate = useNavigate();
   const [cow, setCow] = useState([]);
   const cowdata = async () => {
     const res = await axios.get("http://localhost:8080/api/animaltopname/Cows");
@@ -17,6 +20,13 @@ const AnimalCard = () => {
   useEffect(() => {
     cowdata();
   }, []);
+  const addtocard = () => {
+    if (!isLoggedIn()) {
+      navigate("/login");
+    } else {
+      alert("add to card");
+    }
+  };
   const settings = {
     // dots: true,
     speed: 500,
@@ -108,7 +118,10 @@ const AnimalCard = () => {
                     </span>
                   </p>
 
-                  <button className="custom-add-to-cart-btn">
+                  <button
+                    onClick={addtocard}
+                    className="custom-add-to-cart-btn"
+                  >
                     Buy/Book Now
                   </button>
                 </div>

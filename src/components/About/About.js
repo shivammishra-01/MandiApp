@@ -8,6 +8,8 @@ import Aniket from "./img/Aniket.jpg";
 import manish from "./img/manish.jpg";
 import guddu from "./img/guddu.jpg";
 import shubham from "./img/shubham.jpg";
+import abhishek from "./img/abhishek.jpg";
+import niraj from "./img/niraj.jpg";
 const About = () => {
   return (
     <>
@@ -279,11 +281,7 @@ const About = () => {
               <div class="profile-card">
                 <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
                   <div className="image">
-                    <img
-                      src=".\assets\images\vicky.png"
-                      alt=""
-                      className="profile-pic"
-                    />
+                    <img src={abhishek} alt="" className="profile-pic" />
                   </div>
                   <div className="data">
                     <h2>Abhishek Tiwari</h2>
@@ -292,14 +290,14 @@ const About = () => {
                   </div>
                   <div className="buttons">
                     <a
-                      href="https://www.linkedin.com/in/vicky-cse03"
+                      href="https://www.linkedin.com/in/abhishek-tiwari-69747a240/"
                       className="btn"
                       target="_blank"
                     >
                       Linkedin
                     </a>
                     <a
-                      href="https://github.com/vicky0004"
+                      href="https://github.com/Rudra-Shiva74"
                       className="btn"
                       target="_blank"
                     >
@@ -343,11 +341,7 @@ const About = () => {
               <div class="profile-card">
                 <div className="DevBox d-flex flex-row flex-wrap mx-3 justify-content-center">
                   <div className="image">
-                    <img
-                      src=".\assets\images\vicky.png"
-                      alt=""
-                      className="profile-pic"
-                    />
+                    <img src={niraj} alt="" className="profile-pic" />
                   </div>
                   <div className="data">
                     <h2>Niraj Upadhyay</h2>

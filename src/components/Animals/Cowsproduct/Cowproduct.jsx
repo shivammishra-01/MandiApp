@@ -1,14 +1,15 @@
 // App.jsx
-
+import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../Buffaloproduct/Animalss.css";
 import { listAnimal } from "../../services/animalServices";
+import { isLoggedIn } from "../../Farmer/Auth";
 // import Buffalo from "../img/Crops.jpeg";
 
 function Cowproduct() {
   // start
   const [animal, setAnimal] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     listAnimal()
       .then((response) => {
@@ -19,6 +20,11 @@ function Cowproduct() {
         console.error(error);
       });
   }, []);
+  const addtocard = () => {
+    if (!isLoggedIn()) {
+      navigate("/login");
+    }
+  };
 
   // ends
 
@@ -233,7 +239,10 @@ function Cowproduct() {
                   <p className="custom-product-description">
                     <strong>State:</strong> {animals.state} Kg
                   </p>
-                  <button className="custom-add-to-cart-btn">
+                  <button
+                    onClick={addtocard}
+                    className="custom-add-to-cart-btn"
+                  >
                     Buy/Book Now
                   </button>
                 </div>
