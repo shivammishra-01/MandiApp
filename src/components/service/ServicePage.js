@@ -55,16 +55,16 @@ const ServicePage = () => {
             <div className="card m-2" style={{ width: "22rem" }}>
               <img
                 className="card-img-top p-1"
-                src="https://source.unsplash.com/random/600x400?Crop"
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gettyimages.com%2Fphotos%2Fwheat-mandi&psig=AOvVaw3UiJdTf5W3Lp6IKT6cp5OB&ust=1735390192924000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCboLL-x4oDFQAAAAAdAAAAABAE"
                 style={{ height: "14rem", width: "22rem" }}
                 alt="Card cap"
               />
               <div className="card-body">
                 <h5 className="card-title">CROP</h5>
                 <p className="card-text">
-                  Buffalo is a city in the U.S. state of New York and the seat
-                  of Erie County.It lies in Western New York, at the eastern end
-                  of LakeErie, at the head of the Niagara River
+                  Crops wo plants hain jo farming ke liye grow ki jati hain,
+                  primarily food, fodder, fiber, aur industrial products ke
+                  liye. Yeh do major categories mein divide hote hain:
                 </p>
                 <a href="/Crops" className="btn btn-success">
                   Read More
@@ -106,9 +106,9 @@ const ServicePage = () => {
               <div className="card-body">
                 <h5 className="card-title">FERTILIZERS</h5>
                 <p className="card-text">
-                  Buffalo is a city in the U.S. state of New York and the seat
-                  of Erie County.It lies in Western New York, at the eastern end
-                  of LakeErie, at the head of the Niagara River
+                  Fertilizers ek aise chemicals ya organic substances hote hain
+                  jo mitti mein nutrients provide karte hain, taki faslon ki
+                  growth aur productivity badh sake
                 </p>
                 <a href="/Fertilizer" className="btn btn-success">
                   Read More
