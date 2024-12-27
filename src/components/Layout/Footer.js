@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3 col-lg-4 col-xl-3">
-            <h6 className="text-uppercase fw-bold head">Mandi.com</h6>
+            <h6 className="text-uppercase fw-bold head">𝕄𝕒𝕟𝕕𝕚.𝕔𝕠𝕞</h6>
             <p>
               Mandi.com is your one-stop platform for all agricultural needs.
               From crops to animals and fertilizers, we provide a seamless
