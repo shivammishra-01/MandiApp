@@ -21,13 +21,14 @@ const About = () => {
                 textAlign: "center",
                 backgroundColor: "#00a651",
                 padding: "12px",
-                marginTop: "20px",
+                marginTop: "30px",
+                margin: "30px",
               }}
             >
               <b>----About us----</b>
             </h3>
             <div classNamme="accordion-body">
-              <ul className="ulpara">
+              <ul className="ulpara" style={{ margin: "40px" }}>
                 <li>
                   <p>
                     Our website <strong>MANDI.COM</strong> is e-commerce

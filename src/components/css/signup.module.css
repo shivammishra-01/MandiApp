@@ -5,21 +5,29 @@
 
 .registrationForm {
   background: #4caf50;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
   display: none;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* This is for registration-form only  */
+
 .bottomLine i {
   color: #ffd700;
 }
-.passwordTtoggle {
+
+.passwordToggle {
   position: relative;
   width: 100%;
 }
@@ -32,25 +40,102 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   color: #999;
 }
+
 .passwordToggle i:hover {
   color: #ffd700;
 }
+
 .formControl,
 .formSelect {
   border: none;
   border-radius: 0;
   box-shadow: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
 }
+
 .bottomLine {
   border-bottom: 2px solid #ffd700;
   background: white;
+  margin-bottom: 15px;
 }
+
 .formControl:focus,
 .formSelect:focus {
   outline: none;
   box-shadow: none;
 }
+
 .Home {
   background: #ffd700;
   clip-path: polygon(50% 0%, 100% 0, 100% 96%, 66% 100%, 28% 96%, 0 100%, 0 0);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .registrationForm {
+    padding: 15px;
+    margin: 5px auto;
+    max-width: 90%;
+  }
+
+  .passwordToggle i {
+    right: 8px;
+  }
+
+  .Home {
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 90%,
+      70% 100%,
+      30% 90%,
+      0 100%,
+      0 0
+    );
+    font-size: 14px;
+  }
+
+  .formControl,
+  .formSelect {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .bottomLine {
+    border-bottom: 1.5px solid #ffd700;
+  }
+}
+
+@media (max-width: 480px) {
+  .passwordToggle i {
+    right: 5px;
+  }
+
+  .registrationForm {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .Home {
+    font-size: 12px;
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 85%,
+      75% 100%,
+      25% 85%,
+      0 100%,
+      0 0
+    );
+  }
+
+  .formControl,
+  .formSelect {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
