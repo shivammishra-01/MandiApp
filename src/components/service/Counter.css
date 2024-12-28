@@ -13,6 +13,7 @@
   justify-content: center;
   margin: 50px;
 }
+
 .abc {
   padding-left: 100px;
   margin-top: 25px;
@@ -52,4 +53,48 @@
   background-color: #00a651;
   text-align: center;
   height: 160px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+  .count {
+    flex-direction: column; /* Stack items vertically */
+    margin: 20px; /* Reduce margin */
+  }
+
+  .abc {
+    padding-left: 0; /* Remove extra padding */
+    margin-top: 15px; /* Adjust spacing */
+  }
+
+  .App-logo {
+    height: 50vmin; /* Make logo slightly larger on smaller screens */
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Reduce font size */
+  }
+
+  .section-work-data {
+    height: auto; /* Allow content to dictate height */
+    padding: 20px; /* Add padding for better spacing */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App-logo {
+    height: 60vmin; /* Further adjust logo size */
+  }
+
+  .count {
+    margin: 10px; /* Further reduce margin */
+  }
+
+  .App-header {
+    font-size: calc(8px + 1.5vmin); /* Adjust font size for small screens */
+  }
+
+  .section-work-data {
+    padding: 15px; /* Adjust padding for very small screens */
+  }
 }
